@@ -1,0 +1,94 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:Enigma="http://www.heshjayasinghe.webatu.com/Enigma.RDF#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
+    
+  <rdf:Description rdf:about="http://www.heshjayasinghe.webatu.com/Enigma.RDF">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.heshjayasinghe.webatu.com/Enigma.RDF#email">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.heshjayasinghe.webatu.com/Enigma.RDF#User"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.heshjayasinghe.webatu.com/Enigma.RDF#uname">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.heshjayasinghe.webatu.com/Enigma.RDF#User"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.heshjayasinghe.webatu.com/Enigma.RDF#Question1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.heshjayasinghe.webatu.com/Enigma.RDF#lname">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#Name"/>
+    <rdfs:domain rdf:resource="http://www.heshjayasinghe.webatu.com/Enigma.RDF#User"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.heshjayasinghe.webatu.com/Enigma.RDF#fname">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#Name"/>
+    <rdfs:domain rdf:resource="http://www.heshjayasinghe.webatu.com/Enigma.RDF#User"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.heshjayasinghe.webatu.com/Enigma.RDF#type">
+    <rdfs:domain rdf:resource="http://www.heshjayasinghe.webatu.com/Enigma.RDF#User"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.heshjayasinghe.webatu.com/Enigma.RDF#user3">
+    <Enigma:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hhh@gmail.com</Enigma:email>
+    <Enigma:fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hesh</Enigma:fname>
+    <Enigma:password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">123</Enigma:password>
+    <rdf:type rdf:resource="http://www.heshjayasinghe.webatu.com/Enigma.RDF#User"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.heshjayasinghe.webatu.com/Enigma.RDF#user5">
+    <Enigma:type rdf:resource="http://www.heshjayasinghe.webatu.com/Enigma.RDF#User"/>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.heshjayasinghe.webatu.com/Enigma.RDF#User">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.heshjayasinghe.webatu.com/Enigma.RDF#User2">
+    <Enigma:lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jay</Enigma:lname>
+    <Enigma:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">heshjse@gmail.com</Enigma:email>
+    <Enigma:fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hesh</Enigma:fname>
+    <Enigma:password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">123</Enigma:password>
+    <rdf:type rdf:resource="http://www.heshjayasinghe.webatu.com/Enigma.RDF#User"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.heshjayasinghe.webatu.com/Enigma.RDF#User1">
+    <Enigma:AskQuestion rdf:resource="http://www.heshjayasinghe.webatu.com/Enigma.RDF#Question1"/>
+    <Enigma:lname rdf:datatype="http://www.w3.org/2001/XMLSchema#Name">jayasinghe</Enigma:lname>
+    <Enigma:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">heshjay@hotmail.com</Enigma:email>
+    <Enigma:fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">heshan</Enigma:fname>
+    <Enigma:password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hesh</Enigma:password>
+    <rdf:type rdf:resource="http://www.heshjayasinghe.webatu.com/Enigma.RDF#User"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.heshjayasinghe.webatu.com/Enigma.RDF#AskQuestion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.heshjayasinghe.webatu.com/Enigma.RDF#Question">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.heshjayasinghe.webatu.com/Enigma.RDF#password">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.heshjayasinghe.webatu.com/Enigma.RDF#User"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  
+</rdf:RDF>
