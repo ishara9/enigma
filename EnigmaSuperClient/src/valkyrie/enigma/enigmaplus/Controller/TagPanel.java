@@ -1,11 +1,11 @@
 package valkyrie.enigma.enigmaplus.Controller;
 
-
-import java.awt.BorderLayout;
-import java.awt.Color;
-import javax.swing.JLabel;
+//
+//import java.awt.BorderLayout;
+//import java.awt.Color;
+//import javax.swing.JLabel;
 import javax.swing.JPanel;
-import valkyrie.enigma.enigmaplus.view.ask;
+//import valkyrie.enigma.enigmaplus.view.ask;
 
 public class TagPanel extends JPanel {
 //
