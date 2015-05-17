@@ -20,6 +20,7 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import valkyrie.enigma.enigmaplus.jena_enigma.Jena_Enigma;
+
 import valkyrie.enigma.enigmaplus.model.User;
 
 public class UserController {

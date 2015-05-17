@@ -20,7 +20,7 @@ import java.util.logging.Logger;
 import valkyrie.enigma.enigmaplus.jena_enigma.Jena_Enigma;
 import valkyrie.enigma.enigmaplus.model.Question;
 
-public class QuestionController {
+public class QuestionController{
 public Question q;
     public void insert(String title, String qshort, String qlong, long uid, long qid, String qdate) {
         // public static void main(String args[]){

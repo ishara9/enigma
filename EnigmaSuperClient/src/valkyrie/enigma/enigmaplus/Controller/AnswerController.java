@@ -11,7 +11,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import valkyrie.enigma.enigmaplus.db.DBConnection;
+
 import valkyrie.enigma.enigmaplus.model.Answer;
 
 /**
@@ -19,11 +19,11 @@ import valkyrie.enigma.enigmaplus.model.Answer;
  * @author hesh
  */
 public class AnswerController {
-    public static int addAnswer(Answer answer) throws ClassNotFoundException, SQLException {
-        Connection conn = DBConnection.getDBConnection().getConnection();
-        Statement stm = conn.createStatement();
-        String sql = "Insert into answer(qid,answer,date) values('" + answer.getQid() + "','" + answer.getAnswer() + "','" + answer.getDate() + "')";
-        int res = stm.executeUpdate(sql);
-        return res;
-    }
+//    public static int addAnswer(Answer answer) throws ClassNotFoundException, SQLException {
+//        Connection conn = DBConnection.getDBConnection().getConnection();
+//        Statement stm = conn.createStatement();
+//        String sql = "Insert into answer(qid,answer,date) values('" + answer.getQid() + "','" + answer.getAnswer() + "','" + answer.getDate() + "')";
+//        int res = stm.executeUpdate(sql);
+//        return res;
+//    }
 }

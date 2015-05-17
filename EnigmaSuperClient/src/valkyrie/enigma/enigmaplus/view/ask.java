@@ -13,7 +13,7 @@ import javax.swing.JInternalFrame;
 import javax.swing.table.DefaultTableModel;
 import valkyrie.enigma.enigmaplus.Controller.QuestionController;
 import static valkyrie.enigma.enigmaplus.EnigmaMain.jDesktopPane1;
-import valkyrie.enigma.enigmaplus.jena_enigma.Jena_Enigma;
+
 
 
 public class ask extends javax.swing.JInternalFrame {
