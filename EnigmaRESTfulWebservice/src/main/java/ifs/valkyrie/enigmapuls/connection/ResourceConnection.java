@@ -12,6 +12,5 @@ package ifs.valkyrie.enigmapuls.connection;
  * @author heshanjayasinghe
  */
 public interface ResourceConnection {
-//    public Object getConnection();
-//    public void closeConnection();
+
 }

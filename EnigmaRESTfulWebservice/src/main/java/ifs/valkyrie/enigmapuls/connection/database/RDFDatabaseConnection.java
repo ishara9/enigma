@@ -3,19 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package ifs.valkyrie.enigmapuls.connection.database;
 
+import com.hp.hpl.jena.rdf.model.Model;
 import ifs.valkyrie.enigmapuls.connection.ResourceConnection;
-import java.sql.Connection;
-import java.sql.SQLException;
+import org.openrdf.OpenRDFException;
 
 /**
  *
  * @author heshanjayasinghe
  */
-public interface RDFDatabaseConnection extends ResourceConnection{
-    // public Connection getConnection() throws RDFException, ClassNotFoundException;
+public interface RDFDatabaseConnection extends ResourceConnection {
 
-    public void closeConnection() throws SQLException;
+    public Model getConnection() throws OpenRDFException, ClassNotFoundException;
+
+    public void closeConnection() throws OpenRDFException;
 }
