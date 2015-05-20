@@ -1,10 +1,21 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-	xsi:schemaLocation="http://www.springframework.org/schema/beans
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd ">
 
-	<bean class="com.mkyong.context.SpringApplicationContext"></bean>
+    <bean class="com.mkyong.context.SpringApplicationContext"></bean>
 
-	<bean id="customerBo" class="com.mkyong.customer.impl.CustomerBoImpl"></bean>
-
+    <bean id="customerBo" class="com.mkyong.customer.impl.CustomerBoImpl"></bean>
+        
+    <bean id="RDFDatabaseConnection" class="ifs.valkyrie.enigmapuls.connection.database.impl.RDFDatabaseConnectionImpl" >
+        <constructor-arg index="0" value="/Users/heshanjayasinghe/ enigma/EnigmaRESTfulWebservice/src/main/java/ifs/valkyrie/enigmapuls/database/enigmardf2.rdf"/>
+    </bean>
+    
+    
+    
+    <bean id="UserDAO" class="ifs.valkyrie.enigmapuls.dao.impl.UserDAOImpl" >
+        <constructor-arg ref="RDFDatabaseConnection"/>
+    </bean>
+    
+    
 </beans>

@@ -4,12 +4,12 @@
  * and open the template in the editor.
  */
 
-package ifs.valkyrie.enigmapuls.connection.databaseimpl;
+package ifs.valkyrie.enigmapuls.connection.database.impl;
 
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.util.FileManager;
 import ifs.valkyrie.enigmapuls.connection.database.RDFDatabaseConnection;
-import java.sql.DriverManager;
+
 
 import org.openrdf.OpenRDFException;
 
