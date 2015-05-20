@@ -27,10 +27,10 @@ public class Questionmain extends javax.swing.JInternalFrame {
         ((javax.swing.plaf.basic.BasicInternalFrameUI) this.getUI()).setNorthPane(null);
         
         //  AutoSuggestor autoSuggestor = new AutoSuggestor( txt_mainsearch , this , null, Color.WHITE.brighter(), Color.BLUE, Color.RED, 0.75f) {
-        AutoSuggestor autoSuggestor = new AutoSuggestor(txt_mainsearch, null, null, Color.WHITE.brighter(), Color.BLUE, Color.RED, 0.75f) {
+        AutoSuggestor autoSuggestor = new AutoSuggestor(txt_mainsearch, null, null, Color.WHITE.brighter(), Color.BLUE, Color.RED, 0.100f) {
         @Override
             public boolean wordTyped(String typedWord) {
-
+            System.out.println("ok wada");
                 ArrayList<String> words = new ArrayList<>();
                 words.add("hello");
                 words.add("heritage");
