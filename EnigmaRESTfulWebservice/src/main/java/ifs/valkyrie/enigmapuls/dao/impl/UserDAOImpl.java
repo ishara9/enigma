@@ -17,16 +17,22 @@ import ifs.valkyrie.enigmapuls.model.User;
 import static java.lang.Integer.parseInt;
 import java.util.List;
 import org.openrdf.OpenRDFException;
-
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 /**
  *
  * @author heshanjayasinghe
  */
+@Repository
 public class UserDAOImpl implements UserDAO{
-
+    
     private RDFDatabaseConnection rdfdatabaseConnection;
+    
+    public RDFDatabaseConnection getrdfdatabaseConnection() {
+        return rdfdatabaseConnection;
+    }
 
-    public UserDAOImpl(RDFDatabaseConnection rdfdatabaseConnection) {
+    public void setDatabaseConnection(RDFDatabaseConnection rdfdatabaseConnection) {
         this.rdfdatabaseConnection = rdfdatabaseConnection;
     }
     
@@ -60,7 +66,7 @@ public class UserDAOImpl implements UserDAO{
                 + "}";
         Query query = QueryFactory.create(queryString);
 
-        QueryExecution qexec = QueryExecutionFactory.create(query, rdfdatabaseConnection.getConnection());
+        QueryExecution qexec = QueryExecutionFactory.create(query, getrdfdatabaseConnection().getConnection());
         User u = null;
         try {
             com.hp.hpl.jena.query.ResultSet results = qexec.execSelect();
@@ -79,7 +85,7 @@ public class UserDAOImpl implements UserDAO{
             }
         } finally {
             qexec.close();
-            rdfdatabaseConnection.closeConnection();
+            getrdfdatabaseConnection().closeConnection();
         }
         return u;
     }
