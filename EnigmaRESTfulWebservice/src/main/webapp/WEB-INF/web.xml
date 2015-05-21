@@ -9,7 +9,7 @@
 
     <context-param>
         <param-name>resteasy.resources</param-name>
-        <param-value>com.mkyong.rest.UserREST</param-value>
+        <param-value>ifs.valkyrie.enigmapuls.rest.UserREST</param-value>
     </context-param>
   <!---  <context-param>
         <param-name>resteasy.resources</param-name>

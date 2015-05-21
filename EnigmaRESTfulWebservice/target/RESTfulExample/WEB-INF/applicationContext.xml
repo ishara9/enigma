@@ -25,6 +25,5 @@
     
     <bean id="UserDAO" class="ifs.valkyrie.enigmapuls.dao.impl.UserDAOImpl" ></bean>
     <bean id="UserService" class="ifs.valkyrie.enigmapuls.serviceimple.UserServiceImpl" ></bean>
-    <bean class="com.mkyong.context.SpringApplicationContext"></bean>
-    <bean id="customerBo" class="com.mkyong.customer.impl.CustomerBoImpl"></bean>  
+     
 </beans>
