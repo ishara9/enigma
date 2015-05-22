@@ -27,28 +27,12 @@ public class Questionmain extends javax.swing.JInternalFrame {
         ((javax.swing.plaf.basic.BasicInternalFrameUI) this.getUI()).setNorthPane(null);
         
         //  AutoSuggestor autoSuggestor = new AutoSuggestor( txt_mainsearch , this , null, Color.WHITE.brighter(), Color.BLUE, Color.RED, 0.75f) {
-        AutoSuggestor autoSuggestor = new AutoSuggestor(txt_mainsearch, null, null, Color.WHITE.brighter(), Color.BLUE, Color.RED, 0.100f) {
-        @Override
-            public boolean wordTyped(String typedWord) {
-            System.out.println("ok wada");
-                ArrayList<String> words = new ArrayList<>();
-                words.add("hello");
-                words.add("heritage");
-                words.add("happiness");
-                words.add("goodbye");
-                words.add("cruel");
-                words.add("car");
-                words.add("war");
-                words.add("will");
-                words.add("world");
-                words.add("wall");
-
-
-                setDictionary(words);
-
-                return super.wordTyped(typedWord);
-            }
-        };
+        
+        
+      //  panelquestion.add(autoSuggestor.suggestionsPanel);
+      
+        
+        
         
         
         sortbydate sbd = new sortbydate();
@@ -1042,7 +1026,7 @@ public class Questionmain extends javax.swing.JInternalFrame {
     public static javax.swing.JLabel jLabel16;
     public static javax.swing.JLabel jLabel17;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JPanel panelquestion;
+    public static javax.swing.JPanel panelquestion;
     private javax.swing.JPanel panelquestionmain;
     public static javax.swing.JLabel qpanel1_author;
     public static javax.swing.JLabel qpanel1_date;
@@ -1064,6 +1048,6 @@ public class Questionmain extends javax.swing.JInternalFrame {
     public static javax.swing.JLabel qpanel5_date;
     public static javax.swing.JLabel qpanel5_qnote;
     public static javax.swing.JButton qpanel5_qtitle;
-    private javax.swing.JTextField txt_mainsearch;
+    public static javax.swing.JTextField txt_mainsearch;
     // End of variables declaration//GEN-END:variables
 }

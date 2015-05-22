@@ -38,8 +38,8 @@ public class answertest extends JFrame {
         this.setVisible(true);
 
         box.add(new questionpnel(), box.size());
-              qboxheight = box.size().height;
-              qboxwidth = box.size().width;
+        qboxheight = box.size().height;
+        qboxwidth = box.size().width;
         box.add(new answeringpanel(), box.size());
         scrollPane.validate();
 
@@ -73,13 +73,18 @@ public class answertest extends JFrame {
         public TestPanel() {
             this.setLayout(new GridBagLayout());
             this.setBorder(BorderFactory.createBevelBorder(1));
+            JButton up = new JButton("^");
+            JLabel rate = new JLabel("1");
+            JButton down = new JButton("^");
             JLabel label = new JLabel("" + myId);
             label.setHorizontalAlignment(JLabel.CENTER);
             label.setVerticalAlignment(JLabel.CENTER);
 
             this.setMaximumSize(new Dimension(1000, 200));
             this.setPreferredSize(new Dimension(1000, 100));
-
+            this.add(up);
+            this.add(rate);
+            this.add(down);
             this.add(label);
         }
     }
@@ -101,7 +106,7 @@ public class answertest extends JFrame {
                 public void actionPerformed(ActionEvent e) {
 
                     box.add(new TestPanel(), 1);
-                    
+
                     scrollPane.validate();
                 }
             });
@@ -126,7 +131,7 @@ public class answertest extends JFrame {
             this.add(rate);
             this.add(down);
             this.add(label);
-            
+
         }
 
     }

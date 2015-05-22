@@ -15,14 +15,10 @@
         http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
         http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
     
-  
-    
-   
-    
+    <!--<context:annotation-config />-->
     <bean id="RDFDatabaseConnection" class="ifs.valkyrie.enigmapuls.connection.database.impl.RDFDatabaseConnectionImpl" >
         <constructor-arg index="0" value="/Users/heshanjayasinghe/ enigma/EnigmaRESTfulWebservice/src/main/java/ifs/valkyrie/enigmapuls/database/enigmardf2.rdf"/>
     </bean>
-    
     <bean id="UserDAO" class="ifs.valkyrie.enigmapuls.dao.impl.UserDAOImpl" ></bean>
     <bean id="UserService" class="ifs.valkyrie.enigmapuls.serviceimple.UserServiceImpl" ></bean>
      

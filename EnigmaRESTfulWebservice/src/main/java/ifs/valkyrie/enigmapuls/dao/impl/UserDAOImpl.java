@@ -25,16 +25,16 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public class UserDAOImpl implements UserDAO{
-    
+    @Autowired
     private RDFDatabaseConnection rdfdatabaseConnection;
     
-    public RDFDatabaseConnection getrdfdatabaseConnection() {
-        return rdfdatabaseConnection;
-    }
-
-    public void setDatabaseConnection(RDFDatabaseConnection rdfdatabaseConnection) {
-        this.rdfdatabaseConnection = rdfdatabaseConnection;
-    }
+//    public RDFDatabaseConnection getrdfdatabaseConnection() {
+//        return rdfdatabaseConnection;
+//    }
+//
+//    public void setDatabaseConnection(RDFDatabaseConnection rdfdatabaseConnection) {
+//        this.rdfdatabaseConnection = rdfdatabaseConnection;
+//    }
     
     
     @Override
@@ -66,7 +66,7 @@ public class UserDAOImpl implements UserDAO{
                 + "}";
         Query query = QueryFactory.create(queryString);
 
-        QueryExecution qexec = QueryExecutionFactory.create(query, getrdfdatabaseConnection().getConnection());
+        QueryExecution qexec = QueryExecutionFactory.create(query, rdfdatabaseConnection.getConnection());
         User u = null;
         try {
             com.hp.hpl.jena.query.ResultSet results = qexec.execSelect();
@@ -85,7 +85,7 @@ public class UserDAOImpl implements UserDAO{
             }
         } finally {
             qexec.close();
-            getrdfdatabaseConnection().closeConnection();
+            rdfdatabaseConnection.closeConnection();
         }
         return u;
     }
