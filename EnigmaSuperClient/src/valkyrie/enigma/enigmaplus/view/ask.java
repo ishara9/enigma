@@ -8,24 +8,56 @@ import com.hp.hpl.jena.query.QuerySolution;
 import com.hp.hpl.jena.query.ResultSet;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.util.FileManager;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.event.KeyEvent;
 import java.beans.PropertyVetoException;
 import javax.swing.JInternalFrame;
 import javax.swing.table.DefaultTableModel;
 import valkyrie.enigma.enigmaplus.Controller.QuestionController;
 import static valkyrie.enigma.enigmaplus.EnigmaMain.jDesktopPane1;
 import valkyrie.enigma.enigmaplus.jena_enigma.Jena_Enigma;
+import valkyrie.enigma.enigmaplus.service.controller.TagPanel;
 
 
 public class ask extends javax.swing.JInternalFrame {
 String title1;
 String short_des;
 String des;
-    /**
-     * Creates new form ask
-     */
+   
     public ask() {
         initComponents();
         ((javax.swing.plaf.basic.BasicInternalFrameUI) this.getUI()).setNorthPane(null);
+        String tagarr[] = {"swing", "java", "c++", "awt"};    
+               tagpanel.setPreferredSize(new Dimension(100, 30));
+        tagpanel.setLayout(new FlowLayout(1, 3, 2));
+        tagpanel.setBackground(Color.white);
+        tagpanel.setBorder(javax.swing.BorderFactory.createLineBorder(Color.MAGENTA.magenta));
+        
+        txt_tags.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                tagcheck(evt);
+            }
+
+            private void tagcheck(KeyEvent evt) {
+                String s = txt_tags.getText();
+                if (s.length() > 0) {
+                    for (String tag : tagarr) {
+                        if (s.equals(tag)) {
+                            TagPanel tagp1 = new TagPanel(s);
+                            tagpanel.add(tagp1, tagpanel.getComponentCount() - 1);
+                            txt_tags.setText("");
+            
+                            repaint();
+                            revalidate();
+                        }
+                    }
+                }
+            }
+        });
+
+    
     }
 
     /**
@@ -103,6 +135,12 @@ String des;
         panelask_txt_sdes.setColumns(20);
         panelask_txt_sdes.setRows(5);
         jScrollPane4.setViewportView(panelask_txt_sdes);
+
+        txt_tags.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_tagsActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout tagpanelLayout = new javax.swing.GroupLayout(tagpanel);
         tagpanel.setLayout(tagpanelLayout);
@@ -311,6 +349,10 @@ String des;
          System.out.println(ex);
          }*/
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void txt_tagsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_tagsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_tagsActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
