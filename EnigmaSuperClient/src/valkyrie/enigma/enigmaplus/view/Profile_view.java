@@ -46,6 +46,7 @@ public class Profile_view extends javax.swing.JInternalFrame {
        panelProfile_view_email.setText(uc.u1.getEmail());
        panelProfile_view_designation.setText(uc.u1.getProfession());
        panelProfile_view_expertise.setText(uc.u1.getInterrested());
+       panelProfile_view_reputation.setText(String.valueOf(uc.u1.getReputation()));
        
        BufferedImage image;
         try {
@@ -79,17 +80,20 @@ public class Profile_view extends javax.swing.JInternalFrame {
         }
         
         sbd.sortAnswer(uc.getUserLogged());
-        
-//        for (int i = 0; i < n; i++) {
-//            qc.viewQuestion(Long.parseLong(sbd.sArray2[i]));
-//            questionPanel qp1 = new questionPanel();
-//            qp1.jLabel1.setText(qc.q.getTitle());
-//            qp1.jLabel2.setText(qc.q.getQ_short());
-//            qp1.jLabel3.setText(et.duration(qc.q.getDate()));
-//            qp1.setBounds(10, 10 + i * x, 1080, 50);
-//            jPanel73.add(qp1);
-//        }
-        
+        try{
+        for (int i = 0; i < n; i++) {
+            
+            qc.viewQuestion(Long.parseLong(sbd.sArray2[i]));
+            questionPanel qp1 = new questionPanel();
+            qp1.jLabel1.setText(qc.q.getTitle());
+            qp1.jLabel2.setText(qc.q.getQ_short());
+            qp1.jLabel3.setText(et.duration(qc.q.getDate()));
+            qp1.setBounds(10, 10 + i * x, 1080, 50);
+            jPanel73.add(qp1);
+        }
+        }catch(NumberFormatException e){
+            
+        }
 
 //         for(int i = 0;i<n;i++){
 //        qc.viewQuestion(Long.parseLong(sbd.sArray[i]));   
@@ -391,7 +395,7 @@ public class Profile_view extends javax.swing.JInternalFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelProfile_viewLayout.createSequentialGroup()
                 .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTabbedPane1)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 432, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton36, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27))

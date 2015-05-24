@@ -69,6 +69,8 @@ public Question q;
     
     public void qRate(long qid,boolean isIncrement){
         int qrate=0;
+        int rep=0;
+        String uid="";
         Model model = FileManager.get().loadModel(rdfPath.rdfPath);
         String queryString = "PREFIX sep: <http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#>"
                 + "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>"
@@ -76,7 +78,11 @@ public Question q;
                 + "SELECT * "
                 + "WHERE {"
                 + " ?Question sep:qid \""+qid+"\"."
-                //+ " ?Question sep:uid ?uid ."
+                + " ?Question sep:uid ?uid ."
+                + "  OPTIONAL {"
+                + "  ?User sep:uid ?uid."
+                + "  ?User sep:reputation ?rep ."
+                + " }"
                 + " ?Question sep:qrate ?qrate ."
                 + " }";
                       
@@ -88,10 +94,10 @@ public Question q;
         try {
             ResultSet results = qexec.execSelect();
             while (results.hasNext()) {
-
                 QuerySolution soln = results.nextSolution();
-
                 qrate = Integer.parseInt(soln.getLiteral("qrate").getLexicalForm());
+                rep = Integer.parseInt(soln.getLiteral("rep").getLexicalForm());
+                uid = soln.getLiteral("uid").getLexicalForm();
             }
         } finally {
             qexec.close();
@@ -104,16 +110,22 @@ public Question q;
         String NS = "http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#";
 
         Resource r = m.createResource(NS + "question"+qid);//Subject
+        Resource r2 = m.createResource(NS + "User"+uid);//Subject
         
-        Property p1 = m.createProperty(NS + "qrate");       
+        Property p1 = m.createProperty(NS + "qrate");  
+        Property p2 = m.createProperty(NS + "reputation"); 
+        
         r.removeAll(p1);
+        r2.removeAll(p2);
         
         if(isIncrement){
         r.addProperty(p1, String.valueOf(++qrate), XSDDatatype.XSDstring);
+        r2.addProperty(p2, String.valueOf(++rep), XSDDatatype.XSDstring);
         System.out.println(qrate);
         }
         else{
-        r.addProperty(p1, String.valueOf(--qrate), XSDDatatype.XSDstring);    
+        r.addProperty(p1, String.valueOf(--qrate), XSDDatatype.XSDstring);   
+        r2.addProperty(p2, String.valueOf(--rep), XSDDatatype.XSDstring);
         System.out.println(qrate);
         }
         try {

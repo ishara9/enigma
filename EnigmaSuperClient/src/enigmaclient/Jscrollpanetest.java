@@ -45,7 +45,17 @@ public class Jscrollpanetest extends JFrame {
         });
         t.setRepeats(true);
         t.start();
-
+//        scrollPane.getVerticalScrollBar().addAdjustmentListener(new AdjustmentListener() {
+//
+//            @Override
+//            public void adjustmentValueChanged(AdjustmentEvent event) {
+//                JScrollBar scrollBar = (JScrollBar) event.getAdjustable();
+//                int extent = scrollBar.getModel().getExtent();
+//                System.out.println("1. Value: " + (scrollBar.getValue() + extent) + " Max: " + scrollBar.getMaximum());
+//                box.add(new TestPanel(), box.size());
+//                scrollPane.validate();
+//            }
+//        });
 
     }
 
@@ -56,9 +66,6 @@ public class Jscrollpanetest extends JFrame {
         public TestPanel() {
             this.setLayout(new GridBagLayout());
             this.setBorder(BorderFactory.createBevelBorder(1));
-            JButton up = new JButton("^");
-            JLabel rate = new JLabel("1");
-            JButton down = new JButton("^");
             JLabel label = new JLabel("" + myId);
             label.setHorizontalAlignment(JLabel.CENTER);
             label.setVerticalAlignment(JLabel.CENTER);
@@ -67,9 +74,6 @@ public class Jscrollpanetest extends JFrame {
             this.setPreferredSize(new Dimension(1000, 100));
 
             this.add(label);
-            this.add(up);
-            this.add(rate);
-            this.add(down);
         }
     }
 

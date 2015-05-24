@@ -1,3 +1,4 @@
+
 package valkyrie.enigma.enigmaplus.view;
 
 import java.awt.event.KeyEvent;
@@ -14,10 +15,10 @@ import javax.swing.JOptionPane;
 import valkyrie.enigma.enigmaplus.Controller.UserController;
 import valkyrie.enigma.enigmaplus.EnigmaMain;
 import static valkyrie.enigma.enigmaplus.EnigmaMain.jDesktopPane1;
-import valkyrie.enigma.enigmaplus.model.User;
-import valkyrie.enigma.enigmaplus.service.impl.UserServiceImpl;
 
 import static valkyrie.enigma.enigmaplus.view.editProfile.resize;
+
+
 
 public class Login extends javax.swing.JInternalFrame {
 
@@ -26,7 +27,7 @@ public class Login extends javax.swing.JInternalFrame {
      */
     public Login() {
         initComponents();
-        ((javax.swing.plaf.basic.BasicInternalFrameUI) this.getUI()).setNorthPane(null);
+        ((javax.swing.plaf.basic.BasicInternalFrameUI)this.getUI()).setNorthPane(null);
     }
 
     /**
@@ -44,7 +45,7 @@ public class Login extends javax.swing.JInternalFrame {
         login_email = new javax.swing.JTextField();
         jLabel38 = new javax.swing.JLabel();
         jLabel39 = new javax.swing.JLabel();
-        ButtonSignup = new javax.swing.JButton();
+        jButton31 = new javax.swing.JButton();
         jCheckBox1 = new javax.swing.JCheckBox();
         jButton32 = new javax.swing.JButton();
         login_password = new javax.swing.JPasswordField();
@@ -94,11 +95,11 @@ public class Login extends javax.swing.JInternalFrame {
         jLabel39.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel39.setText("Password");
 
-        ButtonSignup.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        ButtonSignup.setText("Sign In");
-        ButtonSignup.addActionListener(new java.awt.event.ActionListener() {
+        jButton31.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jButton31.setText("Sign In");
+        jButton31.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ButtonSignupActionPerformed(evt);
+                jButton31ActionPerformed(evt);
             }
         });
 
@@ -126,7 +127,7 @@ public class Login extends javax.swing.JInternalFrame {
                 .addGap(61, 61, 61)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                        .addComponent(ButtonSignup, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton31, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(40, 40, 40)
                         .addComponent(jButton32, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jCheckBox1, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -154,7 +155,7 @@ public class Login extends javax.swing.JInternalFrame {
                 .addComponent(jCheckBox1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ButtonSignup)
+                    .addComponent(jButton31)
                     .addComponent(jButton32))
                 .addGap(71, 71, 71))
         );
@@ -248,9 +249,12 @@ public class Login extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_login_emailActionPerformed
 
-    private void ButtonSignupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSignupActionPerformed
-
-       
+    private void jButton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton31ActionPerformed
+        
+//        Jena_Enigma JE = new Jena_Enigma();
+//        JE.sparqlTst();
+//        JE.getName();
+        
         String email = login_email.getText();
         String pw = login_password.getText();
 
@@ -294,7 +298,7 @@ public class Login extends javax.swing.JInternalFrame {
         } catch (Exception ex) {
             Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_ButtonSignupActionPerformed
+    }//GEN-LAST:event_jButton31ActionPerformed
 
     private void jButton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton32ActionPerformed
 //        panelsignup.setVisible(true);
@@ -311,19 +315,18 @@ public class Login extends javax.swing.JInternalFrame {
         //EnigmaMain.head_signup.setVisible(false);
         this.setVisible(false);
         EnigmaMain.jLabel11.setText("Sign up");
-
+        
     }//GEN-LAST:event_jButton32ActionPerformed
 
     private void login_passwordKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_login_passwordKeyPressed
-
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+        
+        if (evt.getKeyCode()==KeyEvent.VK_ENTER) {
 
             String email = login_email.getText();
             String pw = login_password.getText();
 
             try {
-                User user = new UserServiceImpl().LoginUser(email, pw);
-                if (user != null) {
+                if (UserController.Loginuser(email, pw) != null) {
                     JInternalFrame intr = new Questionmain();
                     jDesktopPane1.add(intr);
                     intr.show();
@@ -335,35 +338,39 @@ public class Login extends javax.swing.JInternalFrame {
                     } catch (PropertyVetoException e) {
                         System.out.println(e);
                     }
-
-             //   UserController uc = new UserController();
-                //      uc.getUser(uc.getUserLogged());
-                    EnigmaMain.head_main_userName.setText(user.getFname() + " " + user.getLname());
-
+                    UserController uc = new UserController();
+                    uc.getUser(uc.getUserLogged());
+                    EnigmaMain.head_main_userName.setText(uc.u1.getFname() + " " + uc.u1.getLname());
+                    
                     BufferedImage image;
-//                    try {
-//                      //  image = ImageIO.read(new File(uc.u1.getPic()));
-//                      //  BufferedImage resizedImage = editProfile.resize(image, 34, 30);//resize the image to 100x100
-//                      //  BufferedImage resizedImage2 = editProfile.resize(image, 100, 76);
-//                      //  ImageIcon icon = new ImageIcon(resizedImage);
-//                      //  ImageIcon icon2 = new ImageIcon(resizedImage2);
-//                      //  EnigmaMain.mini_profile_pic.setIcon(icon);
-//                      //  EnigmaMain.profile_pic_signout.setIcon(icon2);
-//                    } catch (IOException ex) {
-//                        Logger.getLogger(editProfile.class.getName()).log(Level.SEVERE, null, ex);
-//                    }
+                    try {
+                        image = ImageIO.read(new File(uc.u1.getPic()));
+                        BufferedImage resizedImage = editProfile.resize(image, 34, 30);//resize the image to 100x100
+                        BufferedImage resizedImage2 = editProfile.resize(image, 100, 76);
+                        ImageIcon icon = new ImageIcon(resizedImage);
+                        ImageIcon icon2 = new ImageIcon(resizedImage2);
+                        EnigmaMain.mini_profile_pic.setIcon(icon);
+                        EnigmaMain.profile_pic_signout.setIcon(icon2);
+                    } catch (IOException ex) {
+                        Logger.getLogger(editProfile.class.getName()).log(Level.SEVERE, null, ex);
+                    }
 
-                } else {
-                    JOptionPane.showMessageDialog(this, "No customer found " + email);
+                    
+
+                } else {                    
+                    JOptionPane.showMessageDialog(this, "No customer found "+ email, "login error", JOptionPane.ERROR_MESSAGE);
                 }
-            } catch (Exception e) {
-                System.out.println(e);
+
+     //   } catch (ClassNotFoundException ex) {
+                //        Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (Exception ex) {
+                Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
     }//GEN-LAST:event_login_passwordKeyPressed
 
     private void login_emailKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_login_emailKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+        if (evt.getKeyCode()==KeyEvent.VK_ENTER) {
 
             String email = login_email.getText();
             String pw = login_password.getText();
@@ -381,7 +388,7 @@ public class Login extends javax.swing.JInternalFrame {
                     }
                     UserController uc = new UserController();
                     uc.getUser(uc.getUserLogged());
-
+                    
                     BufferedImage image;
                     try {
                         image = ImageIO.read(new File(uc.u1.getPic()));
@@ -389,7 +396,7 @@ public class Login extends javax.swing.JInternalFrame {
                         BufferedImage resizedImage2 = editProfile.resize(image, 100, 76);
                         ImageIcon icon = new ImageIcon(resizedImage);
                         ImageIcon icon2 = new ImageIcon(resizedImage2);
-
+                        
                         EnigmaMain.mini_profile_pic.setIcon(icon);
                         EnigmaMain.profile_pic_signout.setIcon(icon2);
                     } catch (IOException ex) {
@@ -397,10 +404,10 @@ public class Login extends javax.swing.JInternalFrame {
                     }
 
                 } else {
-                    JOptionPane.showMessageDialog(this, "No customer found " + email);
+                    JOptionPane.showMessageDialog(this, "No customer found "+ email, "login error", JOptionPane.ERROR_MESSAGE);
                 }
 
-                //   } catch (ClassNotFoundException ex) {
+     //   } catch (ClassNotFoundException ex) {
                 //        Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
             } catch (Exception ex) {
                 Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
@@ -410,7 +417,7 @@ public class Login extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton ButtonSignup;
+    private javax.swing.JButton jButton31;
     private javax.swing.JButton jButton32;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel38;

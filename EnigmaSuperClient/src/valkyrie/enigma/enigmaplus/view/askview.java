@@ -75,10 +75,10 @@ public class askview extends javax.swing.JInternalFrame {
         panelaskview = new javax.swing.JPanel();
         jLabel18 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
         jButton21 = new javax.swing.JButton();
         jButton22 = new javax.swing.JButton();
         jButton12 = new javax.swing.JButton();
+        jComboBox1 = new javax.swing.JComboBox();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jInternalFrame1 = new javax.swing.JInternalFrame();
@@ -128,6 +128,9 @@ public class askview extends javax.swing.JInternalFrame {
             }
         });
 
+        jComboBox1.setEditable(true);
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
         javax.swing.GroupLayout panelaskviewLayout = new javax.swing.GroupLayout(panelaskview);
         panelaskview.setLayout(panelaskviewLayout);
         panelaskviewLayout.setHorizontalGroup(
@@ -138,8 +141,8 @@ public class askview extends javax.swing.JInternalFrame {
                     .addComponent(jLabel18)
                     .addGroup(panelaskviewLayout.createSequentialGroup()
                         .addComponent(jLabel22)
-                        .addGap(31, 31, 31)
-                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton12)))
                 .addContainerGap(605, Short.MAX_VALUE))
@@ -155,12 +158,12 @@ public class askview extends javax.swing.JInternalFrame {
             .addGroup(panelaskviewLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel18)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 584, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 592, Short.MAX_VALUE)
                 .addGroup(panelaskviewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel22)
                     .addGroup(panelaskviewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton12)))
+                        .addComponent(jLabel22)
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton12))
                 .addGap(2, 2, 2)
                 .addGroup(panelaskviewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton21, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -381,6 +384,10 @@ public class askview extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jButton22ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+
+        
+        
+
 //        try {
 //            DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
 //            Connection conn = DBConnection.getDBConnection().getConnection();
@@ -429,6 +436,7 @@ public class askview extends javax.swing.JInternalFrame {
     private javax.swing.JButton jButton22;
     private javax.swing.JButton jButton23;
     private javax.swing.JButton jButton24;
+    private javax.swing.JComboBox jComboBox1;
     private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
@@ -438,7 +446,6 @@ public class askview extends javax.swing.JInternalFrame {
     private javax.swing.JScrollPane jScrollPane4;
     public javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JPanel panelaskview;
     private javax.swing.JPanel panelaskview1;

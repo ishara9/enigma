@@ -8,6 +8,10 @@ import javax.swing.JPanel;
 import valkyrie.enigma.enigmaplus.view.ask;
 
 public class TagPanel extends JPanel {
+
+    public TagPanel(String s) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 //
 //     public TagPanel(String text) {
 //        JLabel textlable = new JLabel(text);

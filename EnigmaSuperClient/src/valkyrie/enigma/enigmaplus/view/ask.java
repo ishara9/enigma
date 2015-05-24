@@ -11,14 +11,19 @@ import com.hp.hpl.jena.util.FileManager;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
+import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.beans.PropertyVetoException;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JInternalFrame;
+import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 import valkyrie.enigma.enigmaplus.Controller.QuestionController;
+import valkyrie.enigma.enigmaplus.EnigmaMain;
+import valkyrie.enigma.enigmaplus.service.controller.TagPanel;
 import static valkyrie.enigma.enigmaplus.EnigmaMain.jDesktopPane1;
 import valkyrie.enigma.enigmaplus.rdfPath;
-import valkyrie.enigma.enigmaplus.service.controller.TagPanel;
+import valkyrie.enigma.enigmaplus.service.controller.Simileraty;
 
 
 public class ask extends javax.swing.JInternalFrame {
@@ -31,33 +36,48 @@ String des;
     public ask() {
         initComponents();
         ((javax.swing.plaf.basic.BasicInternalFrameUI) this.getUI()).setNorthPane(null);
-        String tagarr[] = {"swing", "java", "c++", "awt"};    
-               tagpanel.setPreferredSize(new Dimension(100, 30));
+          tagpanel.setPreferredSize(new Dimension(100, 30));
         tagpanel.setLayout(new FlowLayout(1, 3, 2));
         tagpanel.setBackground(Color.white);
         tagpanel.setBorder(javax.swing.BorderFactory.createLineBorder(Color.MAGENTA.magenta));
-        
-        txt_tags.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                tagcheck(evt);
+        jComboBox1.getEditor().getEditorComponent().addKeyListener(new KeyAdapter() {    
+        public void keyReleased(KeyEvent event) {
+           
+         
+            String s=   ((JTextField)jComboBox1.getEditor().getEditorComponent()).getText();
+            if (event.getKeyCode()==KeyEvent.VK_ENTER) {
+                tagcheck(event);
+                }
+            Simileraty sim = new Simileraty();
+            DefaultComboBoxModel model = (DefaultComboBoxModel)jComboBox1.getModel();
+            model.removeAllElements();
+            model.addElement(s);
+            for(int i=0;i<EnigmaMain.tags.size();i++){
+                String title= EnigmaMain.tags.get(i);
+            double probability3 = sim.compareStrings(s,title);
+            if(probability3>0.7){
+                
+                model.addElement(title);           
             }
-
-            private void tagcheck(KeyEvent evt) {
-                String s = txt_tags.getText();
+                jComboBox1.showPopup();
+    }}
+        private void tagcheck(KeyEvent evt) {
+                String s = ((JTextField)jComboBox1.getEditor().getEditorComponent()).getText();
                 if (s.length() > 0) {
-                    for (String tag : tagarr) {
+                    for (String tag : EnigmaMain.tags) {
                         if (s.equals(tag)) {
                             TagPanel tagp1 = new TagPanel(s);
                             tagpanel.add(tagp1, tagpanel.getComponentCount() - 1);
-                            txt_tags.setText("");
-            
                             repaint();
                             revalidate();
                         }
                     }
                 }
             }
-        });
+});
+        
+
+       
     }
 
     /**
@@ -82,9 +102,9 @@ String des;
         jLabel8 = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
         panelask_txt_sdes = new javax.swing.JTextArea();
-        txt_tags = new javax.swing.JTextField();
         tagpanel = new javax.swing.JPanel();
         jLabel19 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox();
 
         setMaximizable(true);
         setResizable(true);
@@ -149,6 +169,8 @@ String des;
 
         jLabel19.setText("Add tags :");
 
+        jComboBox1.setEditable(true);
+
         javax.swing.GroupLayout panelaskLayout = new javax.swing.GroupLayout(panelask);
         panelask.setLayout(panelaskLayout);
         panelaskLayout.setHorizontalGroup(
@@ -170,9 +192,9 @@ String des;
                             .addComponent(tagpanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(panelaskLayout.createSequentialGroup()
                                 .addComponent(jLabel19)
-                                .addGap(63, 63, 63)
-                                .addComponent(txt_tags, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(18, 18, 18)
                                 .addComponent(jToggleButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(43, 43, 43)
                                 .addComponent(jToggleButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -201,7 +223,7 @@ String des;
                 .addGap(18, 18, 18)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 509, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 513, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(tagpanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -210,8 +232,8 @@ String des;
                     .addComponent(jToggleButton2)
                     .addComponent(jToggleButton3)
                     .addComponent(jToggleButton1)
-                    .addComponent(txt_tags, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel19))
+                    .addComponent(jLabel19)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(36, 36, 36))
         );
 
@@ -352,6 +374,7 @@ String des;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton4;
+    private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -366,6 +389,5 @@ String des;
     private javax.swing.JTextArea panelask_txt_sdes;
     private javax.swing.JTextField panelask_txt_title;
     public static javax.swing.JPanel tagpanel;
-    private javax.swing.JTextField txt_tags;
     // End of variables declaration//GEN-END:variables
 }

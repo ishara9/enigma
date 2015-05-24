@@ -51,6 +51,7 @@ public class UserController {
                 // + "?User  sep:email \"kasun@gmail.com\"."
                 + "?User sep:password ?pass ."
                 + "?User sep:fname ?fname ."
+            //    + "?User sep:reputation ?rep"
                 + "?User sep:uid ?uid ."
                 + "}";
         Query query = QueryFactory.create(queryString);
@@ -64,12 +65,14 @@ public class UserController {
                 String name = soln.getLiteral("fname").getLexicalForm();
                 String pass = soln.getLiteral("pass").getLexicalForm();
                 String uid = soln.getLiteral("uid").getLexicalForm();
+             //   String rep = soln.getLiteral("rep").getLexicalForm();
                 if ((name.equals(username)) && (pass.equals(password))) {
                     u = new User();
 
                     u.setFname(name);
                     loggedUser = uid;
                     u.setUid(parseInt(uid));
+                   // u.setReputation(parseInt(rep));
 
                 }
             }

@@ -10,10 +10,8 @@ import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
-import javax.swing.JComboBox;
 import javax.swing.JInternalFrame;
 import javax.swing.JTextField;
-import org.jdesktop.swingx.autocomplete.AutoCompleteDecorator;
 import valkyrie.enigma.enigmaplus.Controller.AutoSuggestor;
 import valkyrie.enigma.enigmaplus.Controller.ElapsedTimeFinder;
 import valkyrie.enigma.enigmaplus.Controller.QuestionController;
@@ -26,19 +24,23 @@ import valkyrie.enigma.enigmaplus.service.controller.Simileraty;
 
 
 public class Questionmain extends javax.swing.JInternalFrame {
-
+ 
     /**
      * Creates new form questionmain
      */
     public Questionmain() {
+        
+        
+        
         initComponents();
         ((javax.swing.plaf.basic.BasicInternalFrameUI) this.getUI()).setNorthPane(null);
-       //  AutoCompleteDecorator.decorate(jComboBox1);
+        
+        //  AutoSuggestor autoSuggestor = new AutoSuggestor( txt_mainsearch , this , null, Color.WHITE.brighter(), Color.BLUE, Color.RED, 0.75f) {
+    
         
         if(QuestionController.nextQuestion == 0){
-            jButton2.setEnabled(false);
+            jButton1.setEnabled(false);
         }
-        
         jComboBox1.getEditor().getEditorComponent().addKeyListener(new KeyAdapter() {    
         public void keyReleased(KeyEvent event) {
             if (event.getKeyCode() == KeyEvent.VK_ENTER) {
@@ -60,14 +62,6 @@ public class Questionmain extends javax.swing.JInternalFrame {
                 jComboBox1.showPopup();
     }}
 });
-        //  AutoSuggestor autoSuggestor = new AutoSuggestor( txt_mainsearch , this , null, Color.WHITE.brighter(), Color.BLUE, Color.RED, 0.75f) {
-        
-        
-      //  panelquestion.add(autoSuggestor.suggestionsPanel);
-      
-        
-        
-        
         
         sortbydate sbd = new sortbydate();
         sbd.sortbydate();  
@@ -75,60 +69,113 @@ public class Questionmain extends javax.swing.JInternalFrame {
         
         QuestionController qc1 = new QuestionController();
         UserController uc1 = new UserController();
-               
-        qc1.viewQuestion(parseLong(sbd.sArray[0]));
+        
+        try{
+        qc1.viewQuestion(parseLong(sbd.sArray[0+QuestionController.nextQuestion]));
         uc1.getUser(qc1.q.getUid()); 
         qpanel1_qtitle.setText(qc1.q.getTitle());
         qpanel1_qnote.setText(qc1.q.getQ_short());        
         qpanel1_author.setText(uc1.u1.getFname()+" "+uc1.u1.getLname());
         qpanel1_date.setText(et.duration(qc1.q.getDate()));
         jLabel13.setText(String.valueOf(qc1.q.getRate()));
-        
+        }
+        catch(NumberFormatException e){
+            jButton9.hide();
+            jButton11.hide();
+            qpanel1_qtitle.hide();
+            qpanel1_qnote.hide();
+            qpanel1_author.hide();
+            qpanel1_date.hide();
+            jLabel13.hide();
+            jButton2.setEnabled(false);
+        }
         
         QuestionController qc2 = new QuestionController();
         UserController uc2 = new UserController();
         
-        qc2.viewQuestion(parseLong(sbd.sArray[1]));
+        try{
+        qc2.viewQuestion(parseLong(sbd.sArray[1+QuestionController.nextQuestion]));
         uc2.getUser(qc2.q.getUid());        
         qpanel2_qtitle.setText(qc2.q.getTitle());
         qpanel2_qnote.setText(qc2.q.getQ_short());        
         qpanel2_author.setText(uc2.u1.getFname()+" "+uc2.u1.getLname());
         qpanel2_date.setText(et.duration(qc1.q.getDate()));
         jLabel14.setText(String.valueOf(qc2.q.getRate()));
+        }catch(NumberFormatException e){
+            jButton6.hide();
+            jButton7.hide();
+            qpanel2_qtitle.hide();
+            qpanel2_qnote.hide();
+            qpanel2_author.hide();
+            qpanel2_date.hide();
+            jLabel14.hide();
+            jButton2.setEnabled(false);
+        }
         
         QuestionController qc3 = new QuestionController();
         UserController uc3 = new UserController();
         
-        qc3.viewQuestion(parseLong(sbd.sArray[2]));
+        try{
+        qc3.viewQuestion(parseLong(sbd.sArray[2+QuestionController.nextQuestion]));
         uc3.getUser(qc3.q.getUid());        
         qpanel3_qtitle.setText(qc3.q.getTitle());
         qpanel3_qnote.setText(qc3.q.getQ_short());        
         qpanel3_author.setText(uc3.u1.getFname()+" "+uc3.u1.getLname());
         qpanel3_date.setText(et.duration(qc3.q.getDate()));
         jLabel15.setText(String.valueOf(qc3.q.getRate()));
+        }catch(NumberFormatException e){
+            jButton13.hide();
+            jButton14.hide();
+            qpanel3_qtitle.hide();
+            qpanel3_qnote.hide();
+            qpanel3_author.hide();
+            qpanel3_date.hide();
+            jLabel15.hide();
+            jButton2.setEnabled(false);
+        }
         
         QuestionController qc4 = new QuestionController();
         UserController uc4 = new UserController();
-        
-        qc4.viewQuestion(parseLong(sbd.sArray[3]));
+        try{
+        qc4.viewQuestion(parseLong(sbd.sArray[3+QuestionController.nextQuestion]));
         uc4.getUser(qc4.q.getUid());        
         qpanel4_qtitle.setText(qc4.q.getTitle());
         qpanel4_qnote.setText(qc4.q.getQ_short());        
         qpanel4_author.setText(uc4.u1.getFname()+" "+uc4.u1.getLname());
         qpanel4_date.setText(et.duration(qc4.q.getDate()));
         jLabel16.setText(String.valueOf(qc4.q.getRate()));
+        }catch(NumberFormatException e){
+            jButton18.hide();
+            jButton19.hide();
+            qpanel4_qtitle.hide();
+            qpanel4_qnote.hide();
+            qpanel4_author.hide();
+            qpanel4_date.hide();
+            jLabel16.hide();
+            jButton2.setEnabled(false);
+        }
         
         QuestionController qc5 = new QuestionController();
         UserController uc5 = new UserController();
         
-        qc5.viewQuestion(parseLong(sbd.sArray[4]));
+        try{
+        qc5.viewQuestion(parseLong(sbd.sArray[4+QuestionController.nextQuestion]));
         uc5.getUser(qc5.q.getUid());        
         qpanel5_qtitle.setText(qc5.q.getTitle());
         qpanel5_qnote.setText(qc5.q.getQ_short());        
         qpanel5_author.setText(uc5.u1.getFname()+" "+uc5.u1.getLname());
         qpanel5_date.setText(et.duration(qc5.q.getDate()));
         jLabel17.setText(String.valueOf(qc5.q.getRate()));
-        
+        }catch(NumberFormatException e){
+            jButton16.hide();
+            jButton17.hide();
+            qpanel5_qtitle.hide();
+            qpanel5_qnote.hide();
+            qpanel5_author.hide();
+            qpanel5_date.hide();
+            jLabel17.hide();
+            jButton2.setEnabled(false);
+        }
         
     }
     
@@ -190,10 +237,10 @@ public class Questionmain extends javax.swing.JInternalFrame {
         jLabel17 = new javax.swing.JLabel();
         jButton10 = new javax.swing.JButton();
         button_ask = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox();
         jPanel4 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        jComboBox1 = new javax.swing.JComboBox();
 
         setMaximizable(true);
         setResizable(true);
@@ -410,6 +457,38 @@ public class Questionmain extends javax.swing.JInternalFrame {
             }
         });
 
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+
+        jButton1.setText("Back");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jButton2.setText("Next");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addComponent(jButton1)
+                .addGap(18, 18, 18)
+                .addComponent(jButton2))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(jButton1)
+                .addComponent(jButton2))
+        );
+
         jComboBox1.setEditable(true);
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Search" }));
         jComboBox1.setToolTipText("search..");
@@ -434,38 +513,6 @@ public class Questionmain extends javax.swing.JInternalFrame {
             }
         });
 
-        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
-
-        jButton2.setText("Back");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
-        jButton3.setText("Next");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addComponent(jButton2)
-                .addGap(18, 18, 18)
-                .addComponent(jButton3))
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(jButton2)
-                .addComponent(jButton3))
-        );
-
         javax.swing.GroupLayout panelquestionLayout = new javax.swing.GroupLayout(panelquestion);
         panelquestion.setLayout(panelquestionLayout);
         panelquestionLayout.setHorizontalGroup(
@@ -475,108 +522,106 @@ public class Questionmain extends javax.swing.JInternalFrame {
                 .addGroup(panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelquestionLayout.createSequentialGroup()
                         .addGroup(panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(panelquestionLayout.createSequentialGroup()
                                 .addGap(10, 10, 10)
-                                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(50, 50, 50)
-                        .addComponent(qpanel1_qnote, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(662, 662, 662))
+                        .addGroup(panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelquestionLayout.createSequentialGroup()
+                                .addComponent(qpanel5_qtitle, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(550, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelquestionLayout.createSequentialGroup()
+                                .addComponent(qpanel5_qnote, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(374, 374, 374))))
                     .addGroup(panelquestionLayout.createSequentialGroup()
-                        .addGroup(panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panelquestionLayout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(50, 50, 50)
-                        .addGroup(panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(qpanel2_qtitle, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(qpanel2_qnote, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(662, 662, 662))
-                    .addGroup(panelquestionLayout.createSequentialGroup()
-                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 1531, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelquestionLayout.createSequentialGroup()
-                        .addGroup(panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panelquestionLayout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(50, 50, 50)
-                        .addComponent(qpanel4_qnote, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(886, 886, 886))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelquestionLayout.createSequentialGroup()
-                        .addGroup(panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panelquestionLayout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(30, 30, 30)
-                        .addComponent(qpanel3_qnote, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(798, 798, 798))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelquestionLayout.createSequentialGroup()
                         .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 722, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton10)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(button_ask, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(529, 529, 529))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(panelquestionLayout.createSequentialGroup()
-                        .addGroup(panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panelquestionLayout.createSequentialGroup()
-                                .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(50, 50, 50)
-                                .addComponent(qpanel1_qtitle, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(panelquestionLayout.createSequentialGroup()
-                                .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(50, 50, 50)
-                                .addComponent(qpanel3_qtitle, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(panelquestionLayout.createSequentialGroup()
-                                .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(50, 50, 50)
-                                .addComponent(qpanel4_qtitle, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(panelquestionLayout.createSequentialGroup()
+                        .addGroup(panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelquestionLayout.createSequentialGroup()
                                 .addGroup(panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(panelquestionLayout.createSequentialGroup()
                                         .addGap(10, 10, 10)
-                                        .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(50, 50, 50)
+                                .addComponent(qpanel1_qnote, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(20, 20, 20)
+                                .addComponent(qpanel1_date)
+                                .addGap(87, 87, 87)
+                                .addComponent(qpanel1_author, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(panelquestionLayout.createSequentialGroup()
                                 .addGroup(panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(panelquestionLayout.createSequentialGroup()
-                                        .addGap(774, 774, 774)
                                         .addGroup(panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addGroup(panelquestionLayout.createSequentialGroup()
-                                                    .addComponent(qpanel3_date)
-                                                    .addGap(92, 92, 92)
-                                                    .addComponent(qpanel3_author, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGroup(panelquestionLayout.createSequentialGroup()
-                                                    .addComponent(qpanel4_date)
-                                                    .addGap(92, 92, 92)
-                                                    .addComponent(qpanel4_author, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                            .addGroup(panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addGroup(panelquestionLayout.createSequentialGroup()
-                                                    .addComponent(qpanel1_date)
-                                                    .addGap(87, 87, 87)
-                                                    .addComponent(qpanel1_author, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGroup(panelquestionLayout.createSequentialGroup()
-                                                    .addComponent(qpanel2_date)
-                                                    .addGap(87, 87, 87)
-                                                    .addComponent(qpanel2_author, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelquestionLayout.createSequentialGroup()
+                                                .addGroup(panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addGroup(panelquestionLayout.createSequentialGroup()
+                                                        .addGap(10, 10, 10)
+                                                        .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGap(50, 50, 50)
+                                                .addGroup(panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(qpanel2_qtitle, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addGroup(panelquestionLayout.createSequentialGroup()
+                                                        .addComponent(qpanel2_qnote, javax.swing.GroupLayout.DEFAULT_SIZE, 581, Short.MAX_VALUE)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(qpanel2_date))))
+                                            .addGroup(panelquestionLayout.createSequentialGroup()
+                                                .addGroup(panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addGroup(panelquestionLayout.createSequentialGroup()
+                                                        .addGap(10, 10, 10)
+                                                        .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGap(30, 30, 30)
+                                                .addComponent(qpanel3_qnote, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addGap(98, 98, 98))
+                                            .addGroup(panelquestionLayout.createSequentialGroup()
+                                                .addGroup(panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addGroup(panelquestionLayout.createSequentialGroup()
+                                                        .addGap(10, 10, 10)
+                                                        .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGap(50, 50, 50)
+                                                .addComponent(qpanel4_qnote, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addGap(199, 199, 199))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelquestionLayout.createSequentialGroup()
+                                                .addGap(0, 0, Short.MAX_VALUE)
+                                                .addGroup(panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(qpanel4_date, javax.swing.GroupLayout.Alignment.TRAILING)
+                                                    .addComponent(qpanel3_date, javax.swing.GroupLayout.Alignment.TRAILING)
+                                                    .addComponent(qpanel5_date, javax.swing.GroupLayout.Alignment.TRAILING))))
+                                        .addGap(88, 88, 88))
                                     .addGroup(panelquestionLayout.createSequentialGroup()
                                         .addGroup(panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(qpanel5_qnote, javax.swing.GroupLayout.PREFERRED_SIZE, 765, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(qpanel5_qtitle, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addGroup(panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addGroup(panelquestionLayout.createSequentialGroup()
-                                                .addComponent(qpanel5_date)
-                                                .addGap(91, 91, 91)
-                                                .addComponent(qpanel5_author, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                            .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                                .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(50, 50, 50)
+                                                .addComponent(qpanel4_qtitle, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(panelquestionLayout.createSequentialGroup()
+                                                .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(50, 50, 50)
+                                                .addComponent(qpanel3_qtitle, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(panelquestionLayout.createSequentialGroup()
+                                                .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(50, 50, 50)
+                                                .addComponent(qpanel1_qtitle, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addGroup(panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(qpanel2_author, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(qpanel3_author, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(qpanel4_author, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(qpanel5_author, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(72, 72, 72))))
         );
         panelquestionLayout.setVerticalGroup(
             panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -597,29 +642,30 @@ public class Questionmain extends javax.swing.JInternalFrame {
                         .addComponent(jButton11))
                     .addGroup(panelquestionLayout.createSequentialGroup()
                         .addGap(10, 10, 10)
-                        .addGroup(panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(qpanel1_date)
-                                .addComponent(qpanel1_author))
-                            .addComponent(qpanel1_qnote, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGroup(panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(qpanel1_qnote, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panelquestionLayout.createSequentialGroup()
-                        .addGap(34, 34, 34)
+                        .addGap(30, 30, 30)
+                        .addComponent(qpanel1_date))
+                    .addGroup(panelquestionLayout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(qpanel1_author)))
+                .addGap(29, 29, 29)
+                .addGroup(panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelquestionLayout.createSequentialGroup()
                         .addComponent(jButton6)
                         .addGap(7, 7, 7)
                         .addComponent(jLabel14)
                         .addGap(6, 6, 6)
                         .addComponent(jButton7))
                     .addGroup(panelquestionLayout.createSequentialGroup()
-                        .addGap(44, 44, 44)
+                        .addGap(10, 10, 10)
                         .addComponent(qpanel2_qtitle, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, 0)
-                        .addComponent(qpanel2_qnote, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(qpanel2_qnote, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(qpanel2_date)
                             .addComponent(qpanel2_author))))
-                .addGap(49, 49, 49)
+                .addGap(29, 29, 29)
                 .addGroup(panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton13)
                     .addComponent(qpanel3_qtitle, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -629,12 +675,11 @@ public class Questionmain extends javax.swing.JInternalFrame {
                         .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(10, 10, 10)
                         .addComponent(jButton14))
-                    .addGroup(panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(qpanel3_date)
-                            .addComponent(qpanel3_author))
-                        .addComponent(qpanel3_qnote, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(27, 27, 27)
+                    .addGroup(panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(qpanel3_qnote, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(qpanel3_date)
+                        .addComponent(qpanel3_author)))
+                .addGap(28, 28, 28)
                 .addGroup(panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton18)
                     .addComponent(qpanel4_qtitle, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -643,34 +688,32 @@ public class Questionmain extends javax.swing.JInternalFrame {
                         .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, 0)
                         .addComponent(jButton19))
-                    .addGroup(panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(qpanel4_date)
-                            .addComponent(qpanel4_author))
-                        .addComponent(qpanel4_qnote, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(27, 27, 27)
+                    .addGroup(panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(qpanel4_qnote, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(qpanel4_date)
+                        .addComponent(qpanel4_author)))
+                .addGap(30, 30, 30)
                 .addGroup(panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(qpanel5_qtitle, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(panelquestionLayout.createSequentialGroup()
                         .addGroup(panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(panelquestionLayout.createSequentialGroup()
-                                .addGap(30, 30, 30)
+                                .addGap(36, 36, 36)
                                 .addGroup(panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(qpanel5_qnote, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(qpanel5_author)
                                     .addComponent(qpanel5_date)))
+                            .addGroup(panelquestionLayout.createSequentialGroup()
+                                .addGap(30, 30, 30)
+                                .addComponent(qpanel5_qnote, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(panelquestionLayout.createSequentialGroup()
                                 .addComponent(jButton16)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panelquestionLayout.createSequentialGroup()
-                                .addGap(4, 4, 4)
-                                .addComponent(jButton17))
-                            .addGroup(panelquestionLayout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap())
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jButton17)
+                            .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(314, 314, 314))
         );
 
         jScrollPane1.setViewportView(panelquestion);
@@ -679,26 +722,24 @@ public class Questionmain extends javax.swing.JInternalFrame {
         panelquestionmain.setLayout(panelquestionmainLayout);
         panelquestionmainLayout.setHorizontalGroup(
             panelquestionmainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1354, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1087, Short.MAX_VALUE)
         );
         panelquestionmainLayout.setVerticalGroup(
             panelquestionmainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 623, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1354, Short.MAX_VALUE)
+            .addGap(0, 1087, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addComponent(panelquestionmain, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                .addComponent(panelquestionmain, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 816, Short.MAX_VALUE)
+            .addGap(0, 623, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(panelquestionmain, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -707,9 +748,7 @@ public class Questionmain extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void qpanel5_qtitleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_qpanel5_qtitleActionPerformed
-//        panelquestionmain.setVisible(false);
-//        panelquestionview.setVisible(true);
-        
+
         questionviewM qvm = new questionviewM();
         sortbydate sbd = new sortbydate();
         sbd.sortbydate();
@@ -729,14 +768,10 @@ public class Questionmain extends javax.swing.JInternalFrame {
 
     private void qpanel1_qtitleMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_qpanel1_qtitleMouseClicked
 
-        // TODO add your handling code here:
     }//GEN-LAST:event_qpanel1_qtitleMouseClicked
 
     private void qpanel1_qtitleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_qpanel1_qtitleActionPerformed
 
-//        questionviewM qvm = new questionviewM();
-        
-        
         questionviewM qvm = new questionviewM();
         sortbydate sbd = new sortbydate();
         sbd.sortbydate();
@@ -750,59 +785,11 @@ public class Questionmain extends javax.swing.JInternalFrame {
             qvm.setMaximum(true);
             
         } catch (PropertyVetoException e) {
-
         }
-        
-
-        
-        
-//        QuestionController qc1 = new QuestionController();
-//        qc1.qRate(100118, true);
-//        this.setVisible(false);
-//        JInternalFrame intr = new Questionmain();
-//        jDesktopPane1.add(intr);
-//        intr.show();
-//        try {
-//            intr.setMaximum(true);
-//        } catch (PropertyVetoException e) {
-//        }
-
-//        panelquestionviewM.setVisible(true);
-//        panelquestionmain.setVisible(false);
-//        try {
-//            Question qs = QuestionController.fillquestion(qid_1);
-//
-//            qviewpanel_title.setText("<html><body style=\"word-wrap: break-word;\">" + qs.getTitle() + "</body></html>");
-//            qviewpanel_qnote.setText("<html><body style=\"word-wrap: break-word;\">" + qs.getQ_short() + "</body></html>");
-//
-//            qviewpanel_qdes.setText("<html><body style=\"word-wrap: break-word;\">" + qs.getQuestion() + "</body></html>");
-//            jLabel41.setText(String.valueOf(points));
-//            jLabel78.setText(String.valueOf(points));
-//            resPoints = qid_1;
-//            x = true;
-//        } catch (ClassNotFoundException ex) {
-//            Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
-//        } catch (SQLException ex) {
-//            Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
-//        }
     }//GEN-LAST:event_qpanel1_qtitleActionPerformed
 
     private void qpanel2_qtitleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_qpanel2_qtitleActionPerformed
-//        panelquestionviewM.setVisible(true);
-//        panelquestionmain.setVisible(false);
-//        try {
-//            Question qs2 = QuestionController.fillquestion(qid_2);
-//
-//            qviewpanel_title.setText("<html><body style=\"word-wrap: break-word;\">" + qs2.getTitle() + "</body></html>");
-//            qviewpanel_qnote.setText("<html><body style=\"word-wrap: break-word;\">" + qs2.getQ_short() + "</body></html>");
-//            qviewpanel_qdes.setText("<html><body style=\"word-wrap: break-word;\">" + qs2.getQuestion() + "</body></html>");
-//            resPoints = qid_2;
-//            x = true;
-//        } catch (ClassNotFoundException ex) {
-//            Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
-//        } catch (SQLException ex) {
-//            Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
-//        }
+
         questionviewM qvm = new questionviewM();
         sortbydate sbd = new sortbydate();
         sbd.sortbydate();
@@ -817,26 +804,11 @@ public class Questionmain extends javax.swing.JInternalFrame {
             
         } catch (PropertyVetoException e) {
 
-        }
-        
-        
+        }  
     }//GEN-LAST:event_qpanel2_qtitleActionPerformed
 
     private void qpanel3_qtitleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_qpanel3_qtitleActionPerformed
-//        panelquestionviewM.setVisible(true);
-//        panelquestionmain.setVisible(false);
-//        try {
-//            Question qs3 = QuestionController.fillquestion(qid_3);
-//
-//            qviewpanel_title.setText("<html><body style=\"word-wrap: break-word;\">" + qs3.getTitle() + "</body></html>");
-//            qviewpanel_qnote.setText("<html><body style=\"word-wrap: break-word;\">" + qs3.getQ_short() + "</body></html>");
-//            qviewpanel_qdes.setText("<html><body style=\"word-wrap: break-word;\">" + qs3.getQuestion() + "</body></html>");
-//            x = true;
-//        } catch (ClassNotFoundException ex) {
-//            Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
-//        } catch (SQLException ex) {
-//            Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
-//        } // TODO add your handling code here:
+
         
         questionviewM qvm = new questionviewM();
         sortbydate sbd = new sortbydate();
@@ -853,25 +825,10 @@ public class Questionmain extends javax.swing.JInternalFrame {
         } catch (PropertyVetoException e) {
 
         }
-        
-        
     }//GEN-LAST:event_qpanel3_qtitleActionPerformed
 
     private void qpanel4_qtitleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_qpanel4_qtitleActionPerformed
-//        panelquestionviewM.setVisible(true);
-//        panelquestionmain.setVisible(false);
-//        try {
-//            Question qs4 = QuestionController.fillquestion(qid_4);
-//
-//            qviewpanel_title.setText("<html><body style=\"word-wrap: break-word;\">" + qs4.getTitle() + "</body></html>");
-//            qviewpanel_qnote.setText("<html><body style=\"word-wrap: break-word;\">" + qs4.getQ_short() + "</body></html>");
-//            qviewpanel_qdes.setText("<html><body style=\"word-wrap: break-word;\">" + qs4.getQuestion() + "</body></html>");
-//            x = true;
-//        } catch (ClassNotFoundException ex) {
-//            Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
-//        } catch (SQLException ex) {
-//            Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
-//        }  // TODO add your handling code here:
+
         questionviewM qvm = new questionviewM();
         sortbydate sbd = new sortbydate();
         sbd.sortbydate();
@@ -887,8 +844,6 @@ public class Questionmain extends javax.swing.JInternalFrame {
         } catch (PropertyVetoException e) {
 
         }       
-        
-        
     }//GEN-LAST:event_qpanel4_qtitleActionPerformed
 
     private void button_askActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_askActionPerformed
@@ -905,29 +860,7 @@ public class Questionmain extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_button_askActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-//        String search_title = txt_mainsearch.getText();
-//
-//        try {
-//            Question que = QuestionController.searchquestion(search_title);
-//
-//            if (que != null) {
-//
-//                panelquestionmain.setVisible(false);
-//                panelquestionviewM.setVisible(true);
-//                qviewpanel_qdes.setText("<html><body style=\"word-wrap: break-word\">" + que.getQuestion() + "</body></html>");
-//                qviewpanel_title.setText("<html><body style=\"word-wrap: break-word\">" + que.getTitle() + "</body></html>");
-//                qviewpanel_qnote.setText("<html><body style=\"word-wrap: break-word\">" + que.getQ_short() + "</body></html>");
-//
-//            } else {
-//                JOptionPane.showMessageDialog(this, "No Result found !");
-//
-//            }
-//
-//        } catch (ClassNotFoundException ex) {
-//            ex.printStackTrace();
-//        } catch (SQLException ex) {
-//            ex.printStackTrace();
-//        }
+
 
     }//GEN-LAST:event_jButton10ActionPerformed
 
@@ -1082,26 +1015,22 @@ public class Questionmain extends javax.swing.JInternalFrame {
         }
     }//GEN-LAST:event_jButton17ActionPerformed
 
-    private void jComboBox1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jComboBox1KeyReleased
-        
-             
-                System.out.println("ok2");
-    }//GEN-LAST:event_jComboBox1KeyReleased
-
-    private void jComboBox1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jComboBox1KeyPressed
-        
-    }//GEN-LAST:event_jComboBox1KeyPressed
-
-    private void jComboBox1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jComboBox1KeyTyped
-        
-    }//GEN-LAST:event_jComboBox1KeyTyped
-
-    private void jComboBox1PopupMenuCanceled(javax.swing.event.PopupMenuEvent evt) {//GEN-FIRST:event_jComboBox1PopupMenuCanceled
-        jComboBox1.removeAllItems();
-    
-    }//GEN-LAST:event_jComboBox1PopupMenuCanceled
-
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        QuestionController.nextQuestion +=5;
+        this.hide();
+        JInternalFrame intr = new Questionmain();
+        jDesktopPane1.add(intr);
+        intr.show();
+        this.setVisible(false);
+        try {
+            intr.setMaximum(true);
+        } catch (PropertyVetoException e) {
+            System.out.println(e);
+        }
+        jButton1.setEnabled(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         if(QuestionController.nextQuestion>=5){
             QuestionController.nextQuestion -=5;
             this.hide();
@@ -1115,27 +1044,31 @@ public class Questionmain extends javax.swing.JInternalFrame {
                 System.out.println(e);
             }
         }
-        else jButton2.setEnabled(false);
-    }//GEN-LAST:event_jButton2ActionPerformed
+        else jButton1.setEnabled(false);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        QuestionController.nextQuestion +=5;
-        this.hide();
-        JInternalFrame intr = new Questionmain();
-        jDesktopPane1.add(intr);
-        intr.show();
-        this.setVisible(false);
-        try {
-            intr.setMaximum(true);
-        } catch (PropertyVetoException e) {
-            System.out.println(e);
-        }
-        jButton2.setEnabled(true);
-    }//GEN-LAST:event_jButton3ActionPerformed
+    private void jComboBox1PopupMenuCanceled(javax.swing.event.PopupMenuEvent evt) {//GEN-FIRST:event_jComboBox1PopupMenuCanceled
+        jComboBox1.removeAllItems();
+
+    }//GEN-LAST:event_jComboBox1PopupMenuCanceled
+
+    private void jComboBox1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jComboBox1KeyTyped
+
+    }//GEN-LAST:event_jComboBox1KeyTyped
+
+    private void jComboBox1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jComboBox1KeyPressed
+
+    }//GEN-LAST:event_jComboBox1KeyPressed
+
+    private void jComboBox1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jComboBox1KeyReleased
+
+        System.out.println("ok2");
+    }//GEN-LAST:event_jComboBox1KeyReleased
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton button_ask;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton13;
@@ -1145,7 +1078,6 @@ public class Questionmain extends javax.swing.JInternalFrame {
     private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton9;
@@ -1157,7 +1089,7 @@ public class Questionmain extends javax.swing.JInternalFrame {
     public static javax.swing.JLabel jLabel17;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
-    public static javax.swing.JPanel panelquestion;
+    private javax.swing.JPanel panelquestion;
     private javax.swing.JPanel panelquestionmain;
     public static javax.swing.JLabel qpanel1_author;
     public static javax.swing.JLabel qpanel1_date;

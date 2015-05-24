@@ -20,8 +20,8 @@ import valkyrie.enigma.enigmaplus.rdfPath;
  * @author avinda
  */
 public class sortbydate {
-        public String[] sArray = new String[10];
-        public String[] sArray2 = new String[10];
+        public String[] sArray = new String[100];
+        public String[] sArray2 = new String[100];
         int i = 0;
         int j = 0;
     public void sortbydate(){
@@ -47,8 +47,8 @@ public class sortbydate {
                 + " ?Question sep:qshort ?qshort ."
                 + " ?Question sep:qrate ?qrate ."
                 + " }"
-                + "Order by desc(?qdate) "
-                + "LIMIT 10";
+                + "Order by desc(?qdate) ";
+            //    + "LIMIT 10";
 
         Query query = QueryFactory.create(queryString);
         QueryExecution qexec = QueryExecutionFactory.create(query, model);
@@ -60,6 +60,7 @@ public class sortbydate {
                 QuerySolution soln = results.nextSolution();
 
                 sArray[i++] = soln.getLiteral("qid").getLexicalForm();
+//                sArray2[i] = soln.getLiteral("qid").getLexicalForm();
 //                String qdate = soln.getLiteral("qdate").getLexicalForm();
 //                String uid = soln.getLiteral("uid").getLexicalForm();
 //                fname = soln.getLiteral("fname").getLexicalForm();
@@ -100,8 +101,8 @@ public class sortbydate {
                 + " ?Question sep:qid ?qid. "
                 + " ?Question sep:uid \""+uid+"\" ."
                 + " }"
-                + "Order by desc(?qdate) "
-                + "LIMIT 10";
+                + "Order by desc(?qdate) ";
+        //        + "LIMIT 10";
 
         Query query = QueryFactory.create(queryString);
         QueryExecution qexec = QueryExecutionFactory.create(query, model);
@@ -148,12 +149,12 @@ public class sortbydate {
                 + "PREFIX strg: <http://www.w3.org/2001/XMLSchema#string#>"
                 + "SELECT * "
                 + "WHERE {"
-                + " ?Answer sep:adate ?adate ."
-                + " ?Answer sep:qid ?qid ."               
                 + " ?Answer sep:uid \""+uid+"\" ."
+                + " ?Answer sep:adate ?adate ."
+                + " ?Answer sep:qid ?qid ."              
                 + " }"             
-                + "Order by desc(?adate) "
-                + "LIMIT 10";
+                + "Order by desc(?adate) ";
+         //       + "LIMIT 10";
 
         Query query = QueryFactory.create(queryString);
         QueryExecution qexec = QueryExecutionFactory.create(query, model);

@@ -21,15 +21,10 @@ import com.hp.hpl.jena.util.FileManager;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import static java.lang.Long.parseLong;
-
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-
 import valkyrie.enigma.enigmaplus.model.Answer;
-import valkyrie.enigma.enigmaplus.model.Question;
 import valkyrie.enigma.enigmaplus.rdfPath;
-import valkyrie.enigma.enigmaplus.view.AnswerPanel;
 
 /**
  *
