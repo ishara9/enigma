@@ -37,11 +37,13 @@ public class Questionmain extends javax.swing.JInternalFrame {
         
         jComboBox1.getEditor().getEditorComponent().addKeyListener(new KeyAdapter() {    
         public void keyReleased(KeyEvent event) {
+            if (event.getKeyCode() == KeyEvent.VK_ENTER) {
          //   jComboBox1.removeAllItems();
             String s=   ((JTextField)jComboBox1.getEditor().getEditorComponent()).getText();
             Simileraty sim = new Simileraty();
             DefaultComboBoxModel model = (DefaultComboBoxModel)jComboBox1.getModel();
             model.removeAllElements();
+            model.addElement(s); 
             for(int i=0;i<EnigmaMain.titlelist.size();i++){
                 String title= EnigmaMain.titlelist.get(i);
             double probability3 = sim.compareStrings(s,title);
@@ -52,7 +54,7 @@ public class Questionmain extends javax.swing.JInternalFrame {
             }
             
                 jComboBox1.showPopup();
-    }
+    }}
 });
         //  AutoSuggestor autoSuggestor = new AutoSuggestor( txt_mainsearch , this , null, Color.WHITE.brighter(), Color.BLUE, Color.RED, 0.75f) {
         

@@ -23,9 +23,11 @@ import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import org.jdesktop.swingx.autocomplete.AutoCompleteDecorator;
 import valkyrie.enigma.enigmaplus.Controller.TagPanel;
+import valkyrie.enigma.enigmaplus.Controller.UserController;
 import static valkyrie.enigma.enigmaplus.EnigmaMain.jDesktopPane1;
 
 /**
@@ -33,6 +35,8 @@ import static valkyrie.enigma.enigmaplus.EnigmaMain.jDesktopPane1;
  * @author HELLFIRE
  */
 public class signup extends javax.swing.JInternalFrame {
+String filePath = "/Users/heshanjayasinghe/ enigma/EnigmaSuperClient/src/valkyrie/enigma/enigmaplus/view/images/default-person.png";
+
 
     /**
      * Creates new form signup
@@ -333,18 +337,12 @@ public class signup extends javax.swing.JInternalFrame {
 
     private void jButton37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton37ActionPerformed
 
-        int o = jFileChooser1.showOpenDialog(this);
+         int o = jFileChooser1.showOpenDialog(this);
         if (o == JFileChooser.APPROVE_OPTION) {
-            File f = jFileChooser1.getSelectedFile();
-            try {
-                Image image = ImageIO.read(f);
-                ImageIcon icon = new ImageIcon(image);
-               // Image scaleImage = icon.getImage().getScaledInstance(240, 240, Image.SCALE_DEFAULT);
-                profilepiclabel.setIcon((Icon) icon);
-            } catch (IOException ex) {
-                Logger.getLogger(signup.class.getName()).log(Level.SEVERE, null, ex);
-            }
-
+            File picture = jFileChooser1.getSelectedFile();
+            profilepiclabel.setIcon(new ImageIcon("" + jFileChooser1.getSelectedFile()));
+            filePath=picture.getPath();
+            System.out.println(picture.getPath());
         }
     }//GEN-LAST:event_jButton37ActionPerformed
 
@@ -394,6 +392,28 @@ public class signup extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jButton26ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+ if (signup_txt_fname.getText().equals("")
+                || signup_txt_lname.getText().equals("")
+                || signup_txt_email.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "There are fields which are not filled", "Signup  error", JOptionPane.ERROR_MESSAGE);
+        } else {
+            UserController uc = new UserController();
+            
+            uc.newUser(signup_txt_fname.getText(), signup_txt_lname.getText(), signup_txt_email.getText(), signup_txt_pw.getText(), "Interested", signup_txt_prof.getText(), filePath);
+//            uc.newUser(signup_txt_fname.getText(), signup_txt_lname.getText(), signup_txt_email.getText(),String.valueOf(signup_txt_pw.getPassword()), "Interested", signup_txt_prof.getText(), picture.getPath());//editUser(long uid, String fname, String lname, String email, String interested, String designation, String path)
+//          uc.editUser(uc.getUserLogged(), name[0], name[1], panelProfile_view_email.getText(), panelProfile_view_Expertise.getText(), panelProfile_view_designation.getText(), Image_path.getText());
+            JOptionPane.showMessageDialog(null, "Successfully signed up", "Signup  successfull", JOptionPane.INFORMATION_MESSAGE);
+            JInternalFrame intr = new Login();
+            jDesktopPane1.add(intr);
+            intr.show();
+            try {
+                intr.setMaximum(true);
+            } catch (PropertyVetoException e) {
+
+            }
+            head_main.setVisible(false);
+        }
+
 //
 //        String fname = signup_txt_fname.getText();
 //        String lname = signup_txt_lname.getText();
