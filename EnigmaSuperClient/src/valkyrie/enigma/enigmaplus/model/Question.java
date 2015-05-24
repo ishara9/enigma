@@ -1,5 +1,7 @@
 package valkyrie.enigma.enigmaplus.model;
 
+import java.util.List;
+
 public class Question {
     private long qid;
     private String question;
@@ -12,6 +14,7 @@ public class Question {
     private String code;
     private long uid;
     private String category;
+    private List<Integer> askedusers;
 
     public Question(long qid, String question, String title, String q_short, int rate, String date, String attachment, String picture, String code, long uid, String category) {
         this.qid = qid;

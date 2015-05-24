@@ -3,22 +3,30 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package valkyrie.enigma.enigmaplus.view;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
+import java.awt.Image;
 import java.awt.event.KeyEvent;
+import java.awt.image.BufferedImage;
+import java.beans.PropertyVetoException;
 import java.io.File;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.imageio.ImageIO;
+import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
+import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import org.jdesktop.swingx.autocomplete.AutoCompleteDecorator;
 import valkyrie.enigma.enigmaplus.Controller.TagPanel;
-
-
+import static valkyrie.enigma.enigmaplus.EnigmaMain.jDesktopPane1;
 
 /**
  *
@@ -31,14 +39,17 @@ public class signup extends javax.swing.JInternalFrame {
      */
     public signup() {
         initComponents();
-        ((javax.swing.plaf.basic.BasicInternalFrameUI)this.getUI()).setNorthPane(null);
-         
-               tagpanel.setPreferredSize(new Dimension(100, 30));
+        ((javax.swing.plaf.basic.BasicInternalFrameUI) this.getUI()).setNorthPane(null);
+
+        tagpanel.setPreferredSize(new Dimension(100, 30));
         tagpanel.setLayout(new FlowLayout(1, 3, 2));
         tagpanel.setBackground(Color.white);
         tagpanel.setBorder(javax.swing.BorderFactory.createLineBorder(Color.white));
-        
-       
+
+        AutoCompleteDecorator.decorate(Expert_area);
+        AutoCompleteDecorator.decorate(signup_txt_cat);
+        AutoCompleteDecorator.decorate(signup_txt_subcat);
+
     }
 
     /**
@@ -127,6 +138,7 @@ public class signup extends javax.swing.JInternalFrame {
         jLabel32.setText("Profession");
         jPanel6.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 81, -1));
 
+        Expert_area.setEditable(true);
         Expert_area.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         Expert_area.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "marketing", "devloping", "business architecture" }));
         Expert_area.addActionListener(new java.awt.event.ActionListener() {
@@ -169,6 +181,7 @@ public class signup extends javax.swing.JInternalFrame {
         jLabel76.setText("Sub Category");
         jPanel6.add(jLabel76, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 450, -1, -1));
 
+        signup_txt_cat.setEditable(true);
         signup_txt_cat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 signup_txt_catActionPerformed(evt);
@@ -176,6 +189,7 @@ public class signup extends javax.swing.JInternalFrame {
         });
         jPanel6.add(signup_txt_cat, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 400, 250, -1));
 
+        signup_txt_subcat.setEditable(true);
         signup_txt_subcat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 signup_txt_subcatActionPerformed(evt);
@@ -287,20 +301,19 @@ public class signup extends javax.swing.JInternalFrame {
 
     private void Expert_areaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Expert_areaActionPerformed
 
-String selected_tag= (String) Expert_area.getSelectedItem();
+        String selected_tag = (String) Expert_area.getSelectedItem();
 
-               
-                if (selected_tag.length() > 0) {
-                    
-                            TagPanel tagp1 = new TagPanel(selected_tag);
-                            tagpanel.add(tagp1, tagpanel.getComponentCount() - 1);
+        if (selected_tag.length() > 0) {
+
+            TagPanel tagp1 = new TagPanel(selected_tag);
+            tagpanel.add(tagp1, tagpanel.getComponentCount() - 1);
                    //         txt_tags.setText("");
-            
-                           repaint();
-                            revalidate();
-                     
-                }
-       
+
+            repaint();
+            revalidate();
+
+        }
+
 //        String exp = (String) signup_com_exp.getSelectedItem();
 //        ArrayList<String> category;
 //        try {
@@ -319,11 +332,19 @@ String selected_tag= (String) Expert_area.getSelectedItem();
     }//GEN-LAST:event_signup_txt_profActionPerformed
 
     private void jButton37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton37ActionPerformed
-    
+
         int o = jFileChooser1.showOpenDialog(this);
         if (o == JFileChooser.APPROVE_OPTION) {
             File f = jFileChooser1.getSelectedFile();
-            profilepiclabel.setIcon(new ImageIcon("" + jFileChooser1.getSelectedFile()));
+            try {
+                Image image = ImageIO.read(f);
+                ImageIcon icon = new ImageIcon(image);
+               // Image scaleImage = icon.getImage().getScaledInstance(240, 240, Image.SCALE_DEFAULT);
+                profilepiclabel.setIcon((Icon) icon);
+            } catch (IOException ex) {
+                Logger.getLogger(signup.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
         }
     }//GEN-LAST:event_jButton37ActionPerformed
 
@@ -349,7 +370,7 @@ String selected_tag= (String) Expert_area.getSelectedItem();
         String password = signup_txt_pw.getText();
         String cpassword = signup_txt_cpw.getText();
         if (password.equals(cpassword)) {
-          
+
         }
     }//GEN-LAST:event_signup_txt_pwKeyReleased
 
@@ -357,13 +378,19 @@ String selected_tag= (String) Expert_area.getSelectedItem();
         String password = signup_txt_pw.getText();
         String cpassword = signup_txt_cpw.getText();
         if (password.equals(cpassword)) {
-          
+
         }
     }//GEN-LAST:event_signup_txt_cpwKeyReleased
 
     private void jButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton26ActionPerformed
-//        panelsignup.setVisible(false);
-//        panellogin.setVisible(true);
+        JInternalFrame intr = new Login();
+        jDesktopPane1.add(intr);
+        intr.show();
+        try {
+            intr.setMaximum(true);
+        } catch (PropertyVetoException e) {
+
+        }
     }//GEN-LAST:event_jButton26ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -450,29 +477,29 @@ String selected_tag= (String) Expert_area.getSelectedItem();
     public static javax.swing.JPanel tagpanel;
     // End of variables declaration//GEN-END:variables
 
-public class TagPanel extends JPanel {
+    public class TagPanel extends JPanel {
 
-     public TagPanel(String text) {
-        JLabel textlable = new JLabel(text);
-        JLabel close = new JLabel("X");
-        close.setOpaque(true);
-        close.setBackground(new Color(123, 123, 123));
-        textlable.setOpaque(true);
-        textlable.setBackground(new Color(0, 185, 203));
-        textlable.setForeground(Color.white);
-        setLayout(new BorderLayout());
-        close.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
+        public TagPanel(String text) {
+            JLabel textlable = new JLabel(text);
+            JLabel close = new JLabel("X");
+            close.setOpaque(true);
+            close.setBackground(new Color(123, 123, 123));
+            textlable.setOpaque(true);
+            textlable.setBackground(new Color(0, 185, 203));
+            textlable.setForeground(Color.white);
+            setLayout(new BorderLayout());
+            close.addMouseListener(new java.awt.event.MouseAdapter() {
+                public void mousePressed(java.awt.event.MouseEvent evt) {
             //    new Main().removecomp(TagPanel.this);
-                
-               tagpanel.remove(TagPanel.this);
-                tagpanel.repaint();
-                tagpanel.revalidate();
-            }
-        });
-        add(close, BorderLayout.EAST);
-        add(textlable, BorderLayout.WEST);
-    }
 
-}
+                    tagpanel.remove(TagPanel.this);
+                    tagpanel.repaint();
+                    tagpanel.revalidate();
+                }
+            });
+            add(close, BorderLayout.EAST);
+            add(textlable, BorderLayout.WEST);
+        }
+
+    }
 }

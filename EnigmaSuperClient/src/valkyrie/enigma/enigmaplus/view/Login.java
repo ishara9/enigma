@@ -1,4 +1,3 @@
-
 package valkyrie.enigma.enigmaplus.view;
 
 import java.awt.event.KeyEvent;
@@ -20,8 +19,6 @@ import valkyrie.enigma.enigmaplus.service.impl.UserServiceImpl;
 
 import static valkyrie.enigma.enigmaplus.view.editProfile.resize;
 
-
-
 public class Login extends javax.swing.JInternalFrame {
 
     /**
@@ -29,7 +26,7 @@ public class Login extends javax.swing.JInternalFrame {
      */
     public Login() {
         initComponents();
-        ((javax.swing.plaf.basic.BasicInternalFrameUI)this.getUI()).setNorthPane(null);
+        ((javax.swing.plaf.basic.BasicInternalFrameUI) this.getUI()).setNorthPane(null);
     }
 
     /**
@@ -252,15 +249,13 @@ public class Login extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_login_emailActionPerformed
 
     private void ButtonSignupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSignupActionPerformed
-        
-
 
         String email = login_email.getText();
         String pw = login_password.getText();
 
         try {
             User user = new UserServiceImpl().LoginUser(email, pw);
-            if (user!= null) {
+            if (user != null) {
                 JInternalFrame intr = new Questionmain();
                 jDesktopPane1.add(intr);
                 intr.show();
@@ -272,11 +267,11 @@ public class Login extends javax.swing.JInternalFrame {
                 } catch (PropertyVetoException e) {
                     System.out.println(e);
                 }
-                
+
              //   UserController uc = new UserController();
-              //  uc.getUser(uc.getUserLogged());
-                EnigmaMain.head_main_userName.setText(user.getFname()+" "+user.getLname()); 
-                
+                //  uc.getUser(uc.getUserLogged());
+                EnigmaMain.head_main_userName.setText(user.getFname() + " " + user.getLname());
+
                 BufferedImage image;
 //                    try {
 //                      //  image = ImageIO.read(new File(uc.u1.getPic()));
@@ -289,13 +284,13 @@ public class Login extends javax.swing.JInternalFrame {
 //                    } catch (IOException ex) {
 //                        Logger.getLogger(editProfile.class.getName()).log(Level.SEVERE, null, ex);
 //                    }
-                
+
             } else {
                 JOptionPane.showMessageDialog(this, "No customer found " + email);
-           }
-          
+            }
+
      //   } catch (ClassNotFoundException ex) {
-    //        Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+            //        Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         } catch (Exception ex) {
             Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -316,18 +311,19 @@ public class Login extends javax.swing.JInternalFrame {
         //EnigmaMain.head_signup.setVisible(false);
         this.setVisible(false);
         EnigmaMain.jLabel11.setText("Sign up");
-        
+
     }//GEN-LAST:event_jButton32ActionPerformed
 
     private void login_passwordKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_login_passwordKeyPressed
-        
-        if (evt.getKeyCode()==KeyEvent.VK_ENTER) {
+
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
 
             String email = login_email.getText();
             String pw = login_password.getText();
 
             try {
-                if (UserController.Loginuser(email, pw) != null) {
+                User user = new UserServiceImpl().LoginUser(email, pw);
+                if (user != null) {
                     JInternalFrame intr = new Questionmain();
                     jDesktopPane1.add(intr);
                     intr.show();
@@ -339,39 +335,35 @@ public class Login extends javax.swing.JInternalFrame {
                     } catch (PropertyVetoException e) {
                         System.out.println(e);
                     }
-                    UserController uc = new UserController();
-                    uc.getUser(uc.getUserLogged());
-                    EnigmaMain.head_main_userName.setText(uc.u1.getFname() + " " + uc.u1.getLname());
-                    
-                    BufferedImage image;
-                    try {
-                        image = ImageIO.read(new File(uc.u1.getPic()));
-                        BufferedImage resizedImage = editProfile.resize(image, 34, 30);//resize the image to 100x100
-                        BufferedImage resizedImage2 = editProfile.resize(image, 100, 76);
-                        ImageIcon icon = new ImageIcon(resizedImage);
-                        ImageIcon icon2 = new ImageIcon(resizedImage2);
-                        EnigmaMain.mini_profile_pic.setIcon(icon);
-                        EnigmaMain.profile_pic_signout.setIcon(icon2);
-                    } catch (IOException ex) {
-                        Logger.getLogger(editProfile.class.getName()).log(Level.SEVERE, null, ex);
-                    }
 
-                    
+             //   UserController uc = new UserController();
+                //      uc.getUser(uc.getUserLogged());
+                    EnigmaMain.head_main_userName.setText(user.getFname() + " " + user.getLname());
+
+                    BufferedImage image;
+//                    try {
+//                      //  image = ImageIO.read(new File(uc.u1.getPic()));
+//                      //  BufferedImage resizedImage = editProfile.resize(image, 34, 30);//resize the image to 100x100
+//                      //  BufferedImage resizedImage2 = editProfile.resize(image, 100, 76);
+//                      //  ImageIcon icon = new ImageIcon(resizedImage);
+//                      //  ImageIcon icon2 = new ImageIcon(resizedImage2);
+//                      //  EnigmaMain.mini_profile_pic.setIcon(icon);
+//                      //  EnigmaMain.profile_pic_signout.setIcon(icon2);
+//                    } catch (IOException ex) {
+//                        Logger.getLogger(editProfile.class.getName()).log(Level.SEVERE, null, ex);
+//                    }
 
                 } else {
                     JOptionPane.showMessageDialog(this, "No customer found " + email);
                 }
-
-     //   } catch (ClassNotFoundException ex) {
-                //        Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (Exception ex) {
-                Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (Exception e) {
+                System.out.println(e);
             }
         }
     }//GEN-LAST:event_login_passwordKeyPressed
 
     private void login_emailKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_login_emailKeyPressed
-        if (evt.getKeyCode()==KeyEvent.VK_ENTER) {
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
 
             String email = login_email.getText();
             String pw = login_password.getText();
@@ -389,7 +381,7 @@ public class Login extends javax.swing.JInternalFrame {
                     }
                     UserController uc = new UserController();
                     uc.getUser(uc.getUserLogged());
-                    
+
                     BufferedImage image;
                     try {
                         image = ImageIO.read(new File(uc.u1.getPic()));
@@ -397,7 +389,7 @@ public class Login extends javax.swing.JInternalFrame {
                         BufferedImage resizedImage2 = editProfile.resize(image, 100, 76);
                         ImageIcon icon = new ImageIcon(resizedImage);
                         ImageIcon icon2 = new ImageIcon(resizedImage2);
-                        
+
                         EnigmaMain.mini_profile_pic.setIcon(icon);
                         EnigmaMain.profile_pic_signout.setIcon(icon2);
                     } catch (IOException ex) {
@@ -408,7 +400,7 @@ public class Login extends javax.swing.JInternalFrame {
                     JOptionPane.showMessageDialog(this, "No customer found " + email);
                 }
 
-     //   } catch (ClassNotFoundException ex) {
+                //   } catch (ClassNotFoundException ex) {
                 //        Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
             } catch (Exception ex) {
                 Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);

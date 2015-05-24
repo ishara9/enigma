@@ -2,19 +2,27 @@
 package valkyrie.enigma.enigmaplus.view;
 
 import java.awt.Color;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.beans.PropertyVetoException;
 import static java.lang.Long.parseLong;
 import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JComboBox;
 import javax.swing.JInternalFrame;
+import javax.swing.JTextField;
+import org.jdesktop.swingx.autocomplete.AutoCompleteDecorator;
 import valkyrie.enigma.enigmaplus.Controller.AutoSuggestor;
 import valkyrie.enigma.enigmaplus.Controller.ElapsedTimeFinder;
 import valkyrie.enigma.enigmaplus.Controller.QuestionController;
 import valkyrie.enigma.enigmaplus.Controller.UserController;
 import valkyrie.enigma.enigmaplus.Controller.elapsedTime;
+import valkyrie.enigma.enigmaplus.EnigmaMain;
 import static valkyrie.enigma.enigmaplus.EnigmaMain.jDesktopPane1;
 import valkyrie.enigma.enigmaplus.jena_enigma.sortbydate;
+import valkyrie.enigma.enigmaplus.service.controller.Simileraty;
 
 
 public class Questionmain extends javax.swing.JInternalFrame {
@@ -25,7 +33,27 @@ public class Questionmain extends javax.swing.JInternalFrame {
     public Questionmain() {
         initComponents();
         ((javax.swing.plaf.basic.BasicInternalFrameUI) this.getUI()).setNorthPane(null);
+       //  AutoCompleteDecorator.decorate(jComboBox1);
         
+        jComboBox1.getEditor().getEditorComponent().addKeyListener(new KeyAdapter() {    
+        public void keyReleased(KeyEvent event) {
+         //   jComboBox1.removeAllItems();
+            String s=   ((JTextField)jComboBox1.getEditor().getEditorComponent()).getText();
+            Simileraty sim = new Simileraty();
+            DefaultComboBoxModel model = (DefaultComboBoxModel)jComboBox1.getModel();
+            model.removeAllElements();
+            for(int i=0;i<EnigmaMain.titlelist.size();i++){
+                String title= EnigmaMain.titlelist.get(i);
+            double probability3 = sim.compareStrings(s,title);
+            if(probability3>0.7){
+                
+                model.addElement(title);           
+            }
+            }
+            
+                jComboBox1.showPopup();
+    }
+});
         //  AutoSuggestor autoSuggestor = new AutoSuggestor( txt_mainsearch , this , null, Color.WHITE.brighter(), Color.BLUE, Color.RED, 0.75f) {
         
         
@@ -154,9 +182,10 @@ public class Questionmain extends javax.swing.JInternalFrame {
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        txt_mainsearch = new javax.swing.JTextField();
         jButton10 = new javax.swing.JButton();
         button_ask = new javax.swing.JButton();
+        jComboBox1 = new javax.swing.JComboBox();
+        jButton1 = new javax.swing.JButton();
 
         setMaximizable(true);
         setResizable(true);
@@ -357,19 +386,6 @@ public class Questionmain extends javax.swing.JInternalFrame {
 
         jLabel17.setText("0");
 
-        txt_mainsearch.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        txt_mainsearch.setText(" Search..");
-        txt_mainsearch.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                txt_mainsearchMouseClicked(evt);
-            }
-        });
-        txt_mainsearch.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_mainsearchActionPerformed(evt);
-            }
-        });
-
         jButton10.setBackground(new java.awt.Color(255, 255, 255));
         jButton10.setText("Search");
         jButton10.addActionListener(new java.awt.event.ActionListener() {
@@ -383,6 +399,37 @@ public class Questionmain extends javax.swing.JInternalFrame {
         button_ask.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 button_askActionPerformed(evt);
+            }
+        });
+
+        jComboBox1.setEditable(true);
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Search" }));
+        jComboBox1.setToolTipText("search..");
+        jComboBox1.addPopupMenuListener(new javax.swing.event.PopupMenuListener() {
+            public void popupMenuWillBecomeVisible(javax.swing.event.PopupMenuEvent evt) {
+            }
+            public void popupMenuWillBecomeInvisible(javax.swing.event.PopupMenuEvent evt) {
+            }
+            public void popupMenuCanceled(javax.swing.event.PopupMenuEvent evt) {
+                jComboBox1PopupMenuCanceled(evt);
+            }
+        });
+        jComboBox1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jComboBox1KeyTyped(evt);
+            }
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jComboBox1KeyPressed(evt);
+            }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jComboBox1KeyReleased(evt);
+            }
+        });
+
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
             }
         });
 
@@ -446,15 +493,8 @@ public class Questionmain extends javax.swing.JInternalFrame {
                                 .addGap(92, 92, 92)
                                 .addComponent(qpanel4_author, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(panelquestionLayout.createSequentialGroup()
-                                .addGroup(panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(panelquestionLayout.createSequentialGroup()
-                                        .addComponent(txt_mainsearch, javax.swing.GroupLayout.PREFERRED_SIZE, 635, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jButton10)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(button_ask, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(0, 0, Short.MAX_VALUE)))
+                                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 916, Short.MAX_VALUE)))
                         .addGap(72, 72, 72))
                     .addGroup(panelquestionLayout.createSequentialGroup()
                         .addGroup(panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -489,16 +529,28 @@ public class Questionmain extends javax.swing.JInternalFrame {
                                 .addGap(50, 50, 50)
                                 .addComponent(qpanel4_qtitle, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap())))
+                        .addContainerGap())
+                    .addGroup(panelquestionLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton10)
+                        .addGap(48, 48, 48)
+                        .addComponent(button_ask, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(53, 53, 53))))
+            .addGroup(panelquestionLayout.createSequentialGroup()
+                .addGap(149, 149, 149)
+                .addComponent(jButton1)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         panelquestionLayout.setVerticalGroup(
             panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelquestionLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
+                .addGap(15, 15, 15)
                 .addGroup(panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_mainsearch, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(button_ask, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(button_ask, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelquestionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton9)
@@ -588,6 +640,8 @@ public class Questionmain extends javax.swing.JInternalFrame {
                                 .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(4, 4, 4)
                         .addComponent(jButton17)))
+                .addGap(18, 18, 18)
+                .addComponent(jButton1)
                 .addContainerGap())
         );
 
@@ -847,14 +901,6 @@ public class Questionmain extends javax.swing.JInternalFrame {
 
     }//GEN-LAST:event_jButton10ActionPerformed
 
-    private void txt_mainsearchMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_mainsearchMouseClicked
-    //    txt_mainsearch.setText("");
-    }//GEN-LAST:event_txt_mainsearchMouseClicked
-
-    private void txt_mainsearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_mainsearchActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_mainsearchActionPerformed
-
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
        
         QuestionController qc1 = new QuestionController();
@@ -1006,9 +1052,33 @@ public class Questionmain extends javax.swing.JInternalFrame {
         }
     }//GEN-LAST:event_jButton17ActionPerformed
 
+    private void jComboBox1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jComboBox1KeyReleased
+        
+             
+                System.out.println("ok2");
+    }//GEN-LAST:event_jComboBox1KeyReleased
+
+    private void jComboBox1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jComboBox1KeyPressed
+        
+    }//GEN-LAST:event_jComboBox1KeyPressed
+
+    private void jComboBox1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jComboBox1KeyTyped
+        
+    }//GEN-LAST:event_jComboBox1KeyTyped
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+           // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jComboBox1PopupMenuCanceled(javax.swing.event.PopupMenuEvent evt) {//GEN-FIRST:event_jComboBox1PopupMenuCanceled
+        jComboBox1.removeAllItems();
+    
+    }//GEN-LAST:event_jComboBox1PopupMenuCanceled
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton button_ask;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton13;
@@ -1020,6 +1090,7 @@ public class Questionmain extends javax.swing.JInternalFrame {
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton9;
+    private javax.swing.JComboBox jComboBox1;
     public static javax.swing.JLabel jLabel13;
     public static javax.swing.JLabel jLabel14;
     public static javax.swing.JLabel jLabel15;
@@ -1048,6 +1119,5 @@ public class Questionmain extends javax.swing.JInternalFrame {
     public static javax.swing.JLabel qpanel5_date;
     public static javax.swing.JLabel qpanel5_qnote;
     public static javax.swing.JButton qpanel5_qtitle;
-    public static javax.swing.JTextField txt_mainsearch;
     // End of variables declaration//GEN-END:variables
 }
