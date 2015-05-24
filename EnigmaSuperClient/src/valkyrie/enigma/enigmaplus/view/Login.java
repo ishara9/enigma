@@ -250,12 +250,12 @@ public class Login extends javax.swing.JInternalFrame {
 
     private void ButtonSignupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSignupActionPerformed
 
+       
         String email = login_email.getText();
         String pw = login_password.getText();
 
         try {
-            User user = new UserServiceImpl().LoginUser(email, pw);
-            if (user != null) {
+            if (UserController.Loginuser(email, pw) != null) {
                 JInternalFrame intr = new Questionmain();
                 jDesktopPane1.add(intr);
                 intr.show();
@@ -267,30 +267,30 @@ public class Login extends javax.swing.JInternalFrame {
                 } catch (PropertyVetoException e) {
                     System.out.println(e);
                 }
-
-             //   UserController uc = new UserController();
-                //  uc.getUser(uc.getUserLogged());
-                EnigmaMain.head_main_userName.setText(user.getFname() + " " + user.getLname());
-
+                
+                UserController uc = new UserController();
+                uc.getUser(uc.getUserLogged());
+                EnigmaMain.head_main_userName.setText(uc.u1.getFname()+" "+uc.u1.getLname()); 
+                
                 BufferedImage image;
-//                    try {
-//                      //  image = ImageIO.read(new File(uc.u1.getPic()));
-//                      //  BufferedImage resizedImage = editProfile.resize(image, 34, 30);//resize the image to 100x100
-//                      //  BufferedImage resizedImage2 = editProfile.resize(image, 100, 76);
-//                      //  ImageIcon icon = new ImageIcon(resizedImage);
-//                      //  ImageIcon icon2 = new ImageIcon(resizedImage2);
-//                      //  EnigmaMain.mini_profile_pic.setIcon(icon);
-//                      //  EnigmaMain.profile_pic_signout.setIcon(icon2);
-//                    } catch (IOException ex) {
-//                        Logger.getLogger(editProfile.class.getName()).log(Level.SEVERE, null, ex);
-//                    }
-
+                    try {
+                        image = ImageIO.read(new File(uc.u1.getPic()));
+                        BufferedImage resizedImage = editProfile.resize(image, 34, 30);//resize the image to 100x100
+                        BufferedImage resizedImage2 = editProfile.resize(image, 100, 76);
+                        ImageIcon icon = new ImageIcon(resizedImage);
+                        ImageIcon icon2 = new ImageIcon(resizedImage2);
+                        EnigmaMain.mini_profile_pic.setIcon(icon);
+                        EnigmaMain.profile_pic_signout.setIcon(icon2);
+                    } catch (IOException ex) {
+                        Logger.getLogger(editProfile.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                
             } else {
-                JOptionPane.showMessageDialog(this, "No customer found " + email);
-            }
-
+                JOptionPane.showMessageDialog(this, "No customer found "+ email, "login error", JOptionPane.ERROR_MESSAGE);
+           }
+          
      //   } catch (ClassNotFoundException ex) {
-            //        Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+    //        Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         } catch (Exception ex) {
             Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         }
