@@ -28,6 +28,7 @@ import javax.swing.JPanel;
 import org.jdesktop.swingx.autocomplete.AutoCompleteDecorator;
 import valkyrie.enigma.enigmaplus.Controller.TagPanel;
 import valkyrie.enigma.enigmaplus.Controller.UserController;
+import static valkyrie.enigma.enigmaplus.EnigmaMain.head_main;
 import static valkyrie.enigma.enigmaplus.EnigmaMain.jDesktopPane1;
 
 /**
