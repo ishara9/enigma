@@ -19,7 +19,7 @@ import org.openrdf.OpenRDFException;
  */
 public class RDFDatabaseConnectionImpl implements RDFDatabaseConnection{
     private Model model;
-    private String rdfpath;
+    public static String rdfpath;
 
     public RDFDatabaseConnectionImpl(String rdfpath) {
         this.rdfpath = rdfpath;
@@ -42,5 +42,7 @@ public class RDFDatabaseConnectionImpl implements RDFDatabaseConnection{
             model = null;
         }
     }
+    
+    
     
 }

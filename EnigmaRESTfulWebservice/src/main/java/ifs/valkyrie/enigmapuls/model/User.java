@@ -13,7 +13,7 @@ package ifs.valkyrie.enigmapuls.model;
 public class User {
 
     private int uid;
-    private String fname;
+    public String fname;
     private String lname;
     private String email;
     private String password;

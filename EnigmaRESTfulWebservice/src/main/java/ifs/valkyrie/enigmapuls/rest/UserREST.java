@@ -2,11 +2,15 @@ package ifs.valkyrie.enigmapuls.rest;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
+import ifs.valkyrie.enigmapuls.model.Answer;
+import ifs.valkyrie.enigmapuls.model.Question;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.Response;
 
 import ifs.valkyrie.enigmapuls.model.User;
+import ifs.valkyrie.enigmapuls.service.AnswerService;
+import ifs.valkyrie.enigmapuls.service.QuestionService;
 import ifs.valkyrie.enigmapuls.service.UserService;
 import java.io.File;
 import java.util.logging.Level;
@@ -23,6 +27,10 @@ public class UserREST {
 
     @Autowired
     private UserService userservice;
+    @Autowired
+    private QuestionService quesservice;
+    @Autowired
+    private AnswerService answerservice;
 
     @GET
     @Path("/print")
@@ -63,6 +71,24 @@ public class UserREST {
             user.setLname("gunathilaka");
             ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
             String json = ow.writeValueAsString(user);
+            return json;
+        } catch (NullPointerException ex) {
+            System.out.println(ex);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return null;
+
+    }
+    @POST
+    @Path("/findquestion")
+    public String FindQuestions(
+            @QueryParam("qid") int questionid) {
+        
+        try {
+            Question questions = quesservice.SearchQuestiontitle(questionid);
+            ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
+            String json = ow.writeValueAsString(questions);
             return json;
         } catch (NullPointerException ex) {
             System.out.println(ex);

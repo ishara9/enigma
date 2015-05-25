@@ -17,7 +17,7 @@ import javax.websocket.server.ServerEndpoint;
  *
  * @author heshanjayasinghe
  */
-@ServerEndpoint("/endpoint")
+@ServerEndpoint("/lync")
 public class NewWSEndpoint {
 
     @OnMessage

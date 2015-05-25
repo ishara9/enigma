@@ -17,13 +17,13 @@ import org.openrdf.OpenRDFException;
  */
 public interface UserDAO {
     
-    public int AddUser(User user)throws ClassNotFoundException,OpenRDFException;
+    public int CreateUser(User user)throws ClassNotFoundException,OpenRDFException;
     
     public int UpdateUser(User user)throws ClassNotFoundException,OpenRDFException;
     
     public int DeleteUser(long userid)throws ClassNotFoundException,OpenRDFException;
     
-    public User SearchUser(String username, String password)throws ClassNotFoundException,OpenRDFException;
+    public User ReadUser(String username, String password)throws ClassNotFoundException,OpenRDFException;
 
     public List<User> getUserList() throws ClassNotFoundException, OpenRDFException;
 }
