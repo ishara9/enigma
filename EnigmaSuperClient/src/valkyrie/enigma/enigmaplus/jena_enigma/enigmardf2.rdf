@@ -179,8 +179,8 @@
     <ontology:question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">i try .net to java data passing but it not worked well</ontology:question>
     <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
     <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100133</ontology:qid>
-    <ontology:qrate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:qrate>
     <ontology:qdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/25</ontology:qdate>
+    <ontology:qrate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</ontology:qrate>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#question100121">
     <ontology:qrate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</ontology:qrate>
@@ -321,13 +321,13 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#question100134">
-    <ontology:qdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/25</ontology:qdate>
-    <ontology:qrate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:qrate>
+    <ontology:qrate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</ontology:qrate>
+    <ontology:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">set image to jlable</ontology:title>
     <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100134</ontology:qid>
     <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
     <ontology:question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">when i can add image to jlabel</ontology:question>
     <ontology:qshort rdf:datatype="http://www.w3.org/2001/XMLSchema#string">howto add a image to jlabel</ontology:qshort>
-    <ontology:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">set image to jlable</ontology:title>
+    <ontology:qdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/25</ontology:qdate>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#lname">
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -357,11 +357,11 @@
     <ontology:ask rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#question1"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <ontology:picture rdf:datatype="http://www.w3.org/2001/XMLSchema#string">/Users/heshanjayasinghe/enigma/EnigmaSuperClient/src/valkyrie/enigma/enigmaplus/view/images/profile_pic.png</ontology:picture>
+    <ontology:reputation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25</ontology:reputation>
     <rdf:type rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User"/>
-    <ontology:designation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Consultant</ontology:designation>
-    <ontology:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ishara9@gmail.com</ontology:email>
     <ontology:availability rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontology:availability>
-    <ontology:reputation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17</ontology:reputation>
+    <ontology:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ishara9@gmail.com</ontology:email>
+    <ontology:designation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Consultant</ontology:designation>
     <ontology:lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abeysekera</ontology:lname>
     <ontology:interested rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C#, java</ontology:interested>
     <ontology:password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">111</ontology:password>
@@ -724,8 +724,8 @@
     <ontology:designation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">new3</ontology:designation>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#question100130">
+    <ontology:qrate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</ontology:qrate>
     <ontology:qdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/25</ontology:qdate>
-    <ontology:qrate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:qrate>
     <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100130</ontology:qid>
     <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
     <ontology:question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">get 404 error</ontology:question>
