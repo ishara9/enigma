@@ -53,6 +53,7 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User200209">
     <ontology:picture rdf:datatype="http://www.w3.org/2001/XMLSchema#string">/Users/heshanjayasinghe/enigma/EnigmaSuperClient/src/valkyrie/enigma/enigmaplus/view/images/default-person.png</ontology:picture>
+    <ontology:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">shanujse@gmail.com</ontology:email>
     <ontology:lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">321</ontology:lname>
     <ontology:fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">321</ontology:fname>
     <ontology:designation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">321</ontology:designation>
@@ -61,7 +62,15 @@
     <ontology:interested rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interested</ontology:interested>
     <ontology:password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">321</ontology:password>
     <ontology:availability rdf:datatype="http://www.w3.org/2001/XMLSchema#string">available</ontology:availability>
-    <ontology:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">321</ontology:email>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#question100132">
+    <ontology:qdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/25</ontology:qdate>
+    <ontology:qrate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:qrate>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100132</ontology:qid>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
+    <ontology:question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">i try to pass json useing jackson library but it not pass data</ontology:question>
+    <ontology:qshort rdf:datatype="http://www.w3.org/2001/XMLSchema#string">how to pass json useing jackson</ontology:qshort>
+    <ontology:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">how pass JSON objects from webservice</ontology:title>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Ans">
     <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User"/>
@@ -78,7 +87,7 @@
     <ontology:qrate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</ontology:qrate>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User200212">
-    <ontology:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tuz</ontology:email>
+    <ontology:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">shanujse@gmail.com</ontology:email>
     <ontology:reputation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:reputation>
     <ontology:lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tuz</ontology:lname>
     <ontology:designation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tuz</ontology:designation>
@@ -164,6 +173,15 @@
     <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
     <ontology:aid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">102119</ontology:aid>
   </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#question100133">
+    <ontology:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">how to connect lync with java restful service</ontology:title>
+    <ontology:qshort rdf:datatype="http://www.w3.org/2001/XMLSchema#string">how to pass value from C# to java</ontology:qshort>
+    <ontology:question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">i try .net to java data passing but it not worked well</ontology:question>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100133</ontology:qid>
+    <ontology:qrate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:qrate>
+    <ontology:qdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/25</ontology:qdate>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#question100121">
     <ontology:qrate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</ontology:qrate>
     <ontology:qshort rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Using jena libraries its quetionable how to connect RDF file with Enigma+</ontology:qshort>
@@ -179,19 +197,19 @@
     <ontology:password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kas</ontology:password>
     <ontology:lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abeysekera</ontology:lname>
     <ontology:interested rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interested</ontology:interested>
+    <ontology:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">shanujse@gmail.com</ontology:email>
     <ontology:reputation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:reputation>
     <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200213</ontology:uid>
-    <ontology:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abeysekera.kasun@gmail.com</ontology:email>
     <ontology:picture rdf:datatype="http://www.w3.org/2001/XMLSchema#string">/Users/heshanjayasinghe/enigma/EnigmaSuperClient/src/valkyrie/enigma/enigmaplus/view/images/default-person.png</ontology:picture>
     <ontology:fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kasun</ontology:fname>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User200201">
     <ontology:picture rdf:datatype="http://www.w3.org/2001/XMLSchema#string">/Users/heshanjayasinghe/enigma/EnigmaSuperClient/src/valkyrie/enigma/enigmaplus/view/images/default-person.png</ontology:picture>
     <ontology:ask rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#question1"/>
+    <ontology:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">shanujse@gmail.com</ontology:email>
     <ontology:availability rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontology:availability>
     <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200201</ontology:uid>
     <ontology:reputation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21</ontology:reputation>
-    <ontology:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kasun@gmail.com</ontology:email>
     <ontology:interested rdf:datatype="http://www.w3.org/2001/XMLSchema#string">java, nothin else</ontology:interested>
     <ontology:fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kasun</ontology:fname>
     <ontology:usernotification rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#notification1"/>
@@ -302,6 +320,15 @@
     <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#question100134">
+    <ontology:qdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/25</ontology:qdate>
+    <ontology:qrate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:qrate>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100134</ontology:qid>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
+    <ontology:question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">when i can add image to jlabel</ontology:question>
+    <ontology:qshort rdf:datatype="http://www.w3.org/2001/XMLSchema#string">howto add a image to jlabel</ontology:qshort>
+    <ontology:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">set image to jlable</ontology:title>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#lname">
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User"/>
@@ -309,7 +336,7 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://www.heshjayasinghe.webatu.com/Enigma.RDF#user9">
     <j.0:lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kathika</j.0:lname>
-    <j.0:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kadit@gmail.com</j.0:email>
+    <j.0:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">shanujse@gmail.com</j.0:email>
     <j.0:fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kazrov</j.0:fname>
     <j.0:password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ra4tU7g</j.0:password>
     <j.0:designation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer</j.0:designation>
@@ -340,13 +367,13 @@
     <ontology:password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">111</ontology:password>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User200214">
+    <ontology:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ishara9@gmail.com</ontology:email>
     <ontology:password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">usa</ontology:password>
     <ontology:reputation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:reputation>
     <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200214</ontology:uid>
     <ontology:interested rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interested</ontology:interested>
     <ontology:designation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">usa</ontology:designation>
     <ontology:picture rdf:datatype="http://www.w3.org/2001/XMLSchema#string">/Users/heshanjayasinghe/enigma/EnigmaSuperClient/src/valkyrie/enigma/enigmaplus/view/images/default-person.png</ontology:picture>
-    <ontology:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">usa@usa</ontology:email>
     <ontology:availability rdf:datatype="http://www.w3.org/2001/XMLSchema#string">available</ontology:availability>
     <ontology:lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">usa</ontology:lname>
     <ontology:fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">usa</ontology:fname>
@@ -356,7 +383,7 @@
     <ontology:designation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer</ontology:designation>
     <ontology:password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ra4tU7g</ontology:password>
     <ontology:fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kazrov</ontology:fname>
-    <ontology:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kadit@gmail.com</ontology:email>
+    <ontology:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ishara9@gmail.com</ontology:email>
     <ontology:lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kathika</ontology:lname>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#qcode">
@@ -468,8 +495,8 @@
     <ontology:designation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">junior executive</ontology:designation>
     <ontology:password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">333</ontology:password>
     <ontology:lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kodithuwakku</ontology:lname>
-    <ontology:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thisunk@gmail.com</ontology:email>
     <ontology:interested rdf:datatype="http://www.w3.org/2001/XMLSchema#string">javaScript, HTML5</ontology:interested>
+    <ontology:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">heshjse@gmail.com</ontology:email>
     <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200203</ontology:uid>
     <rdf:type rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User"/>
     <ontology:picture rdf:datatype="http://www.w3.org/2001/XMLSchema#string">/Users/heshanjayasinghe/enigma/EnigmaSuperClient/src/valkyrie/enigma/enigmaplus/view/images/IMG_0619.JPG</ontology:picture>
@@ -527,12 +554,12 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User200205">
-    <ontology:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">new@user</ontology:email>
     <ontology:reputation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11</ontology:reputation>
     <ontology:lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">user</ontology:lname>
     <ontology:password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">new</ontology:password>
     <ontology:designation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">professionHere</ontology:designation>
     <ontology:interested rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interested</ontology:interested>
+    <ontology:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">shanujse@gmail.com</ontology:email>
     <ontology:availability rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontology:availability>
     <ontology:fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">new</ontology:fname>
     <ontology:picture rdf:datatype="http://www.w3.org/2001/XMLSchema#string">/Users/heshanjayasinghe/enigma/EnigmaSuperClient/src/valkyrie/enigma/enigmaplus/view/images/default-person.png</ontology:picture>
@@ -600,13 +627,13 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User200206">
     <ontology:interested rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interested</ontology:interested>
-    <ontology:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">new2@homes</ontology:email>
     <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200206</ontology:uid>
     <ontology:fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">new2</ontology:fname>
     <ontology:reputation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:reputation>
     <ontology:password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">new</ontology:password>
     <ontology:availability rdf:datatype="http://www.w3.org/2001/XMLSchema#string">available</ontology:availability>
     <ontology:lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">homes</ontology:lname>
+    <ontology:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">shanujse@gmail.com</ontology:email>
     <ontology:picture rdf:datatype="http://www.w3.org/2001/XMLSchema#string">/Users/heshanjayasinghe/enigma/EnigmaSuperClient/src/valkyrie/enigma/enigmaplus/view/images/default-person.png</ontology:picture>
     <ontology:designation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">detective</ontology:designation>
   </rdf:Description>
@@ -686,12 +713,12 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User200207">
     <ontology:reputation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:reputation>
-    <ontology:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">new3@new3</ontology:email>
     <ontology:fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">new3</ontology:fname>
     <ontology:password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">new</ontology:password>
     <ontology:interested rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interested</ontology:interested>
     <ontology:lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">new3</ontology:lname>
     <ontology:availability rdf:datatype="http://www.w3.org/2001/XMLSchema#string">available</ontology:availability>
+    <ontology:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">shanujse@gmail.com</ontology:email>
     <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200207</ontology:uid>
     <ontology:picture rdf:datatype="http://www.w3.org/2001/XMLSchema#string">/Users/heshanjayasinghe/enigma/EnigmaSuperClient/src/valkyrie/enigma/enigmaplus/view/images/default-person.png</ontology:picture>
     <ontology:designation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">new3</ontology:designation>
@@ -731,10 +758,10 @@
     <ontology:reputation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:reputation>
     <ontology:designation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qwe</ontology:designation>
     <ontology:picture rdf:datatype="http://www.w3.org/2001/XMLSchema#string">/Users/heshanjayasinghe/enigma/EnigmaSuperClient/src/valkyrie/enigma/enigmaplus/view/images/default-person.png</ontology:picture>
-    <ontology:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qwe</ontology:email>
     <ontology:interested rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interested</ontology:interested>
     <ontology:password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qwe</ontology:password>
     <ontology:availability rdf:datatype="http://www.w3.org/2001/XMLSchema#string">available</ontology:availability>
+    <ontology:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">shanujse@gmail.com</ontology:email>
     <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200210</ontology:uid>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#question">
@@ -802,10 +829,18 @@
     <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
     <ontology:aid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">102109</ontology:aid>
   </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#question100131">
+    <ontology:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">create java socket in netbeans</ontology:title>
+    <ontology:qshort rdf:datatype="http://www.w3.org/2001/XMLSchema#string">how to create java socket in easy way</ontology:qshort>
+    <ontology:question rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ontology:question>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100131</ontology:qid>
+    <ontology:qrate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:qrate>
+    <ontology:qdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/25</ontology:qdate>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User200208">
     <ontology:interested rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interested</ontology:interested>
     <ontology:picture rdf:datatype="http://www.w3.org/2001/XMLSchema#string">/Users/heshanjayasinghe/enigma/EnigmaSuperClient/src/valkyrie/enigma/enigmaplus/view/images/default-person.png</ontology:picture>
-    <ontology:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">123</ontology:email>
     <ontology:reputation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:reputation>
     <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200208</ontology:uid>
     <ontology:fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">123</ontology:fname>
@@ -813,6 +848,7 @@
     <ontology:designation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">123</ontology:designation>
     <ontology:lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">123</ontology:lname>
     <ontology:availability rdf:datatype="http://www.w3.org/2001/XMLSchema#string">available</ontology:availability>
+    <ontology:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">shanujse@gmail.com</ontology:email>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#reputation">
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
@@ -842,12 +878,12 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User200211">
     <ontology:interested rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interested</ontology:interested>
-    <ontology:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wer</ontology:email>
-    <ontology:lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wer</ontology:lname>
     <ontology:reputation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:reputation>
     <ontology:picture rdf:datatype="http://www.w3.org/2001/XMLSchema#string">/Users/heshanjayasinghe/enigma/EnigmaSuperClient/src/valkyrie/enigma/enigmaplus/view/images/default-person.png</ontology:picture>
     <ontology:designation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wer</ontology:designation>
     <ontology:password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wer</ontology:password>
+    <ontology:lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jayasinghe</ontology:lname>
+    <ontology:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ishara9@gmail.com</ontology:email>
     <ontology:availability rdf:datatype="http://www.w3.org/2001/XMLSchema#string">available</ontology:availability>
     <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200211</ontology:uid>
     <ontology:fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wer</ontology:fname>

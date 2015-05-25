@@ -365,18 +365,23 @@ String[] askerMail = new String[100];
     private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
 
         
-       try{
+       new Thread( new Runnable() {
+    @Override
+    public void run() {
+        try{
         for (int j = 0; j < askerMail.length - 1; j++) {
             if (!askerStatus[j].equals("avilable")) {
                 EmailController ec = new EmailController();
                 //String qid, String title, String sDescription, String description, String askerFname, String expertEmail
-                ec.sendMail(String.valueOf(q.getQid()), q.getTitle(), q.getQ_short(), q.getQuestion(), askerFname[j], askerMail[j]);
+                ec.sendMail(String.valueOf(q.getQid()), q.getTitle(), q.getQ_short(), q.getQuestion(), "Ishara : ishara9@gmail.com", askerMail[j]);
             }
         }
        }catch(Exception e){
-                       JOptionPane.showMessageDialog(null, "Exception occur", "email sending error", JOptionPane.ERROR_MESSAGE);
+                //       JOptionPane.showMessageDialog(null, "Exception occur", "email sending error", JOptionPane.ERROR_MESSAGE);
 
        }
+    }
+}).start();
        
         this.setVisible(false);
         intr.setVisible(false);
