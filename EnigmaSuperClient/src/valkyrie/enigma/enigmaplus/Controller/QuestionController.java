@@ -66,7 +66,49 @@ public Question q;
         }
 
     }
-    
+    public void notificationInsert(long qid, String title, String qshort, String qdate, String[] AskerId) {
+        // public static void main(String args[]){
+        Model m = ModelFactory.createDefaultModel();
+        //  m.read("/Users/avinda/Desktop/ishara/jena_Enigma/jena_Enigma/src/jena_enigma/enigmardf2.rdf", "RDF/XML");
+        m.read(rdfPath.rdfPath, "RDF/XML");
+        String NS = "http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#";
+
+        Resource r = m.createResource(NS + "notification"+qid);//Subject
+        Property p1 = m.createProperty(NS + "title");
+        Property p2 = m.createProperty(NS + "qshort");
+   //     Property p3 = m.createProperty(NS + "question");
+        Property p4 = m.createProperty(NS + "askerid");
+        Property p5 = m.createProperty(NS + "qid");
+        Property p6 = m.createProperty(NS + "askerid");
+        Property p7 = m.createProperty(NS + "qdate");
+
+        r.removeAll(p1);
+        r.removeAll(p2);
+ //       r.removeAll(p3);
+        r.removeAll(p4);
+        r.removeAll(p5);
+        r.removeAll(p6);
+        r.removeAll(p7);
+//        r.addProperty(p1, "title", XSDDatatype.XSDstring);
+//        r.addProperty(p2, "qshort", XSDDatatype.XSDstring);
+//        r.addProperty(p3, "qlong", XSDDatatype.XSDstring);
+//        r.addProperty(p4, "String.valueOf(uid)", XSDDatatype.XSDstring);
+
+        r.addProperty(p1, title, XSDDatatype.XSDstring);
+        r.addProperty(p2, qshort, XSDDatatype.XSDstring);
+ //       r.addProperty(p3, qlong, XSDDatatype.XSDstring);
+        r.addProperty(p4, String.valueOf(AskerId[0]), XSDDatatype.XSDstring);
+        r.addProperty(p5, String.valueOf(qid), XSDDatatype.XSDstring);
+        r.addProperty(p6, String.valueOf(AskerId[1]), XSDDatatype.XSDstring);
+        r.addProperty(p7, qdate, XSDDatatype.XSDstring);
+        
+        try {
+            m.write(new FileOutputStream(rdfPath.rdfPath), "RDF/XML");
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(QuestionController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }
     public void qRate(long qid,boolean isIncrement){
         int qrate=0;
         int rep=0;

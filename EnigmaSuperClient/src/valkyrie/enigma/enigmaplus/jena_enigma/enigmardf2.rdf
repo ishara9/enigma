@@ -7,49 +7,49 @@
     xmlns:ontology="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#answer100123">
-    <ontology:aid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100123</ontology:aid>
-    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
-    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
-    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100123</ontology:qid>
-    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
     <ontology:answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">asas</ontology:answer>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100123</ontology:qid>
+    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
+    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
+    <ontology:aid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100123</ontology:aid>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#adate">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Answer"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Answer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#cid">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Category"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Category"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#question100128">
-    <ontology:qdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:qdate>
-    <ontology:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">what is this?</ontology:title>
-    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100128</ontology:qid>
-    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200213</ontology:uid>
-    <ontology:question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">how this will work?</ontology:question>
-    <ontology:qshort rdf:datatype="http://www.w3.org/2001/XMLSchema#string">what can i do with this?</ontology:qshort>
     <ontology:qrate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</ontology:qrate>
+    <ontology:qshort rdf:datatype="http://www.w3.org/2001/XMLSchema#string">what can i do with this?</ontology:qshort>
+    <ontology:question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">how this will work?</ontology:question>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200213</ontology:uid>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100128</ontology:qid>
+    <ontology:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">what is this?</ontology:title>
+    <ontology:qdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:qdate>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#interested">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#answer102108">
-    <ontology:answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ontology:answer>
-    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
-    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
-    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
-    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
     <ontology:aid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">102108</ontology:aid>
+    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
+    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
+    <ontology:answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ontology:answer>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#usernotification">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:range rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Notification"/>
     <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#picture"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Notification"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User200209">
     <ontology:picture rdf:datatype="http://www.w3.org/2001/XMLSchema#string">/Users/heshanjayasinghe/enigma/EnigmaSuperClient/src/valkyrie/enigma/enigmaplus/view/images/default-person.png</ontology:picture>
@@ -64,18 +64,18 @@
     <ontology:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">321</ontology:email>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Ans">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:range rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Answer"/>
     <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Answer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#question100120">
-    <ontology:qrate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</ontology:qrate>
-    <ontology:qdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/03/24</ontology:qdate>
-    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100120</ontology:qid>
-    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
-    <ontology:question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sdasdasdasd</ontology:question>
-    <ontology:qshort rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sasda</ontology:qshort>
     <ontology:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">asda</ontology:title>
+    <ontology:qshort rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sasda</ontology:qshort>
+    <ontology:question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sdasdasdasd</ontology:question>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100120</ontology:qid>
+    <ontology:qdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/03/24</ontology:qdate>
+    <ontology:qrate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</ontology:qrate>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User200212">
     <ontology:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tuz</ontology:email>
@@ -90,34 +90,34 @@
     <ontology:availability rdf:datatype="http://www.w3.org/2001/XMLSchema#string">available</ontology:availability>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#usercat">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:range rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Category"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Question"/>
     <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Question"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Category"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#qrate">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Question"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Question"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#question0">
     <ontology:qrate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-1</ontology:qrate>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#answer102124">
-    <ontology:answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ontology:answer>
-    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
-    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
-    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
-    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
     <ontology:aid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">102124</ontology:aid>
+    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
+    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
+    <ontology:answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ontology:answer>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#answer102112">
-    <ontology:answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ontology:answer>
-    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
-    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
-    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
-    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
     <ontology:aid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">102112</ontology:aid>
+    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
+    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
+    <ontology:answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ontology:answer>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Question5">
     <ontology:qdate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014/12/29</ontology:qdate>
@@ -132,46 +132,46 @@
     <rdf:type rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Question"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#answer102107">
-    <ontology:aid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">102107</ontology:aid>
-    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
-    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
-    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
-    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200201</ontology:uid>
     <ontology:answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fixed aid and all</ontology:answer>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200201</ontology:uid>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
+    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
+    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
+    <ontology:aid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">102107</ontology:aid>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#question100129">
-    <ontology:qrate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</ontology:qrate>
-    <ontology:qshort rdf:datatype="http://www.w3.org/2001/XMLSchema#string">123 is a user who asks a question</ontology:qshort>
-    <ontology:question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">123 is a test question </ontology:question>
-    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200208</ontology:uid>
-    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100129</ontology:qid>
-    <ontology:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">123 ask question</ontology:title>
     <ontology:qdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/24</ontology:qdate>
+    <ontology:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">123 ask question</ontology:title>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100129</ontology:qid>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200208</ontology:uid>
+    <ontology:question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">123 is a test question </ontology:question>
+    <ontology:qshort rdf:datatype="http://www.w3.org/2001/XMLSchema#string">123 is a user who asks a question</ontology:qshort>
+    <ontology:qrate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</ontology:qrate>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#question100117">
-    <ontology:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">How to increment question ID </ontology:title>
-    <ontology:qshort rdf:datatype="http://www.w3.org/2001/XMLSchema#string">According to each question being asked</ontology:qshort>
-    <ontology:question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">How to increment question ID According to each question being asked</ontology:question>
-    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
-    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100117</ontology:qid>
     <ontology:qrate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:qrate>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100117</ontology:qid>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
+    <ontology:question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">How to increment question ID According to each question being asked</ontology:question>
+    <ontology:qshort rdf:datatype="http://www.w3.org/2001/XMLSchema#string">According to each question being asked</ontology:qshort>
+    <ontology:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">How to increment question ID </ontology:title>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#answer102119">
-    <ontology:aid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">102119</ontology:aid>
-    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
-    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
-    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
-    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
     <ontology:answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">answer after changes</ontology:answer>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
+    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
+    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
+    <ontology:aid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">102119</ontology:aid>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#question100121">
-    <ontology:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">How to connect rdf with jena</ontology:title>
-    <ontology:qdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/03/24</ontology:qdate>
-    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100121</ontology:qid>
-    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
-    <ontology:question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Using jena libraries its quetionable how to connect RDF file with Enigma+</ontology:question>
-    <ontology:qshort rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Using jena libraries its quetionable how to connect RDF file with Enigma+</ontology:qshort>
     <ontology:qrate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</ontology:qrate>
+    <ontology:qshort rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Using jena libraries its quetionable how to connect RDF file with Enigma+</ontology:qshort>
+    <ontology:question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Using jena libraries its quetionable how to connect RDF file with Enigma+</ontology:question>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100121</ontology:qid>
+    <ontology:qdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/03/24</ontology:qdate>
+    <ontology:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">How to connect rdf with jena</ontology:title>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User200213">
     <ontology:availability rdf:datatype="http://www.w3.org/2001/XMLSchema#string">available</ontology:availability>
@@ -190,7 +190,7 @@
     <ontology:ask rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#question1"/>
     <ontology:availability rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontology:availability>
     <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200201</ontology:uid>
-    <ontology:reputation rdf:datatype="http://www.w3.org/2001/XMLSchema#long">20</ontology:reputation>
+    <ontology:reputation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21</ontology:reputation>
     <ontology:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kasun@gmail.com</ontology:email>
     <ontology:interested rdf:datatype="http://www.w3.org/2001/XMLSchema#string">java, nothin else</ontology:interested>
     <ontology:fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kasun</ontology:fname>
@@ -219,110 +219,110 @@
     <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200201</ontology:uid>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#fname">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#subcat">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Category"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Category"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Answer2">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Answer"/>
-    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015/06/15</ontology:adate>
-    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100114</ontology:qid>
-    <ontology:aid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">102105</ontology:aid>
-    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200203</ontology:uid>
-    <ontology:avote rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</ontology:avote>
     <ontology:answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">answer for answer2</ontology:answer>
+    <ontology:avote rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</ontology:avote>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200203</ontology:uid>
+    <ontology:aid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">102105</ontology:aid>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100114</ontology:qid>
+    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015/06/15</ontology:adate>
+    <rdf:type rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Answer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#availability">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#nid">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Notification"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Notification"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#answer102111">
-    <ontology:aid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">102111</ontology:aid>
-    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
-    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
-    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
-    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
     <ontology:answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ontology:answer>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
+    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
+    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
+    <ontology:aid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">102111</ontology:aid>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#answer102123">
-    <ontology:aid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">102123</ontology:aid>
-    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
-    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
-    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
-    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
     <ontology:answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ontology:answer>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
+    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
+    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
+    <ontology:aid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">102123</ontology:aid>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#answer102106">
-    <ontology:answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AID FIXED</ontology:answer>
-    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
-    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100126</ontology:qid>
-    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
-    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
     <ontology:aid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">102106</ontology:aid>
+    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
+    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100126</ontology:qid>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
+    <ontology:answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AID FIXED</ontology:answer>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#answer102118">
-    <ontology:answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">answer affffffteerr changes done</ontology:answer>
-    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
-    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
-    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
-    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
     <ontology:aid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">102118</ontology:aid>
+    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
+    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
+    <ontology:answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">answer affffffteerr changes done</ontology:answer>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#question100118">
-    <ontology:qrate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16</ontology:qrate>
-    <ontology:qdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/03/23</ontology:qdate>
-    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100118</ontology:qid>
-    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
-    <ontology:question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Date Time included question ldes</ontology:question>
-    <ontology:qshort rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Date Time included question sdes</ontology:qshort>
     <ontology:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Date Time included question</ontology:title>
+    <ontology:qshort rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Date Time included question sdes</ontology:qshort>
+    <ontology:question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Date Time included question ldes</ontology:question>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100118</ontology:qid>
+    <ontology:qdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/03/23</ontology:qdate>
+    <ontology:qrate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16</ontology:qrate>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#ntime">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Notification"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Notification"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#email">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#lname">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.heshjayasinghe.webatu.com/Enigma.RDF#user9">
-    <j.0:reputation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15</j.0:reputation>
-    <j.0:designation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer</j.0:designation>
-    <j.0:password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ra4tU7g</j.0:password>
-    <j.0:fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kazrov</j.0:fname>
-    <j.0:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kadit@gmail.com</j.0:email>
     <j.0:lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kathika</j.0:lname>
+    <j.0:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kadit@gmail.com</j.0:email>
+    <j.0:fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kazrov</j.0:fname>
+    <j.0:password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ra4tU7g</j.0:password>
+    <j.0:designation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer</j.0:designation>
+    <j.0:reputation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15</j.0:reputation>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#question100122">
-    <ontology:qdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/03/24</ontology:qdate>
-    <ontology:qrate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:qrate>
-    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100122</ontology:qid>
-    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
-    <ontology:question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Test date question Long</ontology:question>
-    <ontology:qshort rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Test date question short</ontology:qshort>
     <ontology:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Test date question</ontology:title>
+    <ontology:qshort rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Test date question short</ontology:qshort>
+    <ontology:question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Test date question Long</ontology:question>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100122</ontology:qid>
+    <ontology:qrate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:qrate>
+    <ontology:qdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/03/24</ontology:qdate>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User200202">
     <ontology:fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ishara</ontology:fname>
@@ -352,17 +352,17 @@
     <ontology:fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">usa</ontology:fname>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#user9">
-    <ontology:lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kathika</ontology:lname>
-    <ontology:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kadit@gmail.com</ontology:email>
-    <ontology:fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kazrov</ontology:fname>
-    <ontology:password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ra4tU7g</ontology:password>
-    <ontology:designation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer</ontology:designation>
     <ontology:reputation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15</ontology:reputation>
+    <ontology:designation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer</ontology:designation>
+    <ontology:password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ra4tU7g</ontology:password>
+    <ontology:fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kazrov</ontology:fname>
+    <ontology:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kadit@gmail.com</ontology:email>
+    <ontology:lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kathika</ontology:lname>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#qcode">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Question"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Question"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Notification">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -379,81 +379,86 @@
     <ontology:qrate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">36</ontology:qrate>
     <ontology:question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">question long 6</ontology:question>
   </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Tags">
+    <ontology:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C#</ontology:tag>
+    <ontology:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string">java</ontology:tag>
+    <ontology:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C++</ontology:tag>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Answer3">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Answer"/>
-    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015/01/12</ontology:adate>
-    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100113</ontology:qid>
-    <ontology:aid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">102102</ontology:aid>
-    <ontology:avote rdf:datatype="http://www.w3.org/2001/XMLSchema#int">12</ontology:avote>
-    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
     <ontology:answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">answer 3 is here</ontology:answer>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
+    <ontology:avote rdf:datatype="http://www.w3.org/2001/XMLSchema#int">12</ontology:avote>
+    <ontology:aid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">102102</ontology:aid>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100113</ontology:qid>
+    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015/01/12</ontology:adate>
+    <rdf:type rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Answer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#answer102110">
-    <ontology:answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ontology:answer>
-    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
-    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
-    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
-    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
     <ontology:aid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">102110</ontology:aid>
+    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
+    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
+    <ontology:answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ontology:answer>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#uid">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Notification"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Question"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Question"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Notification"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#notification1">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Notification"/>
-    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#long">001</ontology:uid>
-    <ontology:nid rdf:datatype="http://www.w3.org/2001/XMLSchema#long">001</ontology:nid>
-    <ontology:ntime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">11.11.11</ontology:ntime>
     <ontology:ntext rdf:datatype="http://www.w3.org/2001/XMLSchema#string">you got answer for your question</ontology:ntext>
+    <ontology:ntime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">11.11.11</ontology:ntime>
+    <ontology:nid rdf:datatype="http://www.w3.org/2001/XMLSchema#long">001</ontology:nid>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#long">001</ontology:uid>
+    <rdf:type rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Notification"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#answer102122">
-    <ontology:aid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">102122</ontology:aid>
-    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
-    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
-    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
-    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
     <ontology:answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ontology:answer>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
+    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
+    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
+    <ontology:aid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">102122</ontology:aid>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#answer102117">
-    <ontology:aid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">102117</ontology:aid>
-    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
-    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
-    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
-    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
     <ontology:answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ontology:answer>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
+    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
+    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
+    <ontology:aid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">102117</ontology:aid>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#question100119">
-    <ontology:qdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/03/25</ontology:qdate>
-    <ontology:qshort rdf:datatype="http://www.w3.org/2001/XMLSchema#string">asasdas</ontology:qshort>
-    <ontology:question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">asdasdasd</ontology:question>
-    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
-    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100119</ontology:qid>
-    <ontology:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Date into seconds</ontology:title>
     <ontology:qrate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</ontology:qrate>
+    <ontology:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Date into seconds</ontology:title>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100119</ontology:qid>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
+    <ontology:question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">asdasdasd</ontology:question>
+    <ontology:qshort rdf:datatype="http://www.w3.org/2001/XMLSchema#string">asasdas</ontology:qshort>
+    <ontology:qdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/03/25</ontology:qdate>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#question100123">
-    <ontology:qdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/03/26</ontology:qdate>
-    <ontology:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is this question is there?</ontology:title>
-    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100123</ontology:qid>
-    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
-    <ontology:question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is this question is there? um not asking again ...</ontology:question>
-    <ontology:qshort rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is this question is there? sure?</ontology:qshort>
     <ontology:qrate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</ontology:qrate>
+    <ontology:qshort rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is this question is there? sure?</ontology:qshort>
+    <ontology:question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is this question is there? um not asking again ...</ontology:question>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100123</ontology:qid>
+    <ontology:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is this question is there?</ontology:title>
+    <ontology:qdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/03/26</ontology:qdate>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#qpicture">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Question"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Question"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User15">
-    <ontology:qrate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16</ontology:qrate>
     <ontology:qrate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14</ontology:qrate>
+    <ontology:qrate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16</ontology:qrate>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User200203">
     <ontology:reputation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11</ontology:reputation>
@@ -470,28 +475,28 @@
     <ontology:picture rdf:datatype="http://www.w3.org/2001/XMLSchema#string">/Users/heshanjayasinghe/enigma/EnigmaSuperClient/src/valkyrie/enigma/enigmaplus/view/images/IMG_0619.JPG</ontology:picture>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#answer102121">
-    <ontology:answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ontology:answer>
-    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
-    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
-    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
-    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
     <ontology:aid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">102121</ontology:aid>
+    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
+    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
+    <ontology:answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ontology:answer>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Question">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#attachment">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Question"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Question"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#answer102116">
-    <ontology:answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ontology:answer>
-    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
-    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
-    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
-    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
     <ontology:aid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">102116</ontology:aid>
+    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
+    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
+    <ontology:answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ontology:answer>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Question2">
     <ontology:qshort rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qshort 2</ontology:qshort>
@@ -508,18 +513,18 @@
     <ontology:attachment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qattachment2</ontology:attachment>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#question100124">
-    <ontology:qrate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</ontology:qrate>
-    <ontology:qshort rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Everything impossible, what is possible for me?</ontology:qshort>
-    <ontology:question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I would like to hear any comments you have to give, Thank you very much!!!</ontology:question>
-    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200203</ontology:uid>
-    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100124</ontology:qid>
-    <ontology:qdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/03/26</ontology:qdate>
     <ontology:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hello World, is there anything that i can really do?</ontology:title>
+    <ontology:qdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/03/26</ontology:qdate>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100124</ontology:qid>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200203</ontology:uid>
+    <ontology:question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I would like to hear any comments you have to give, Thank you very much!!!</ontology:question>
+    <ontology:qshort rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Everything impossible, what is possible for me?</ontology:qshort>
+    <ontology:qrate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</ontology:qrate>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#expertarea">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Category"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Category"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User200205">
     <ontology:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">new@user</ontology:email>
@@ -534,64 +539,64 @@
     <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200205</ontology:uid>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#question10">
-    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
-    <ontology:question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RDF 1st question Long_des</ontology:question>
-    <ontology:qshort rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RDF 1st question short_des</ontology:qshort>
     <ontology:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RDF 1st question</ontology:title>
+    <ontology:qshort rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RDF 1st question short_des</ontology:qshort>
+    <ontology:question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RDF 1st question Long_des</ontology:question>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#answer102120">
-    <ontology:answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hello</ontology:answer>
-    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
-    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
-    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
-    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
     <ontology:aid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">102120</ontology:aid>
+    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
+    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
+    <ontology:answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hello</ontology:answer>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#answer100127">
-    <ontology:answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">test answer</ontology:answer>
-    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
-    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
-    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
-    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
     <ontology:aid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:aid>
+    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
+    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
+    <ontology:answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">test answer</ontology:answer>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#answer102115">
-    <ontology:aid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">102115</ontology:aid>
-    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
-    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
-    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
-    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
     <ontology:answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hello</ontology:answer>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
+    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
+    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
+    <ontology:aid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">102115</ontology:aid>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#answer102127">
-    <ontology:answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hello12</ontology:answer>
-    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
-    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
-    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
-    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/24</ontology:adate>
     <ontology:aid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">102127</ontology:aid>
+    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/24</ontology:adate>
+    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
+    <ontology:answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hello12</ontology:answer>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#testing123">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#title">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Question"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Question"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#ntext">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Notification"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Notification"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#question100125">
-    <ontology:qrate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-1</ontology:qrate>
-    <ontology:qdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/04/07</ontology:qdate>
-    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100125</ontology:qid>
-    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200201</ontology:uid>
-    <ontology:question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qq</ontology:question>
-    <ontology:qshort rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qq</ontology:qshort>
     <ontology:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">i have q</ontology:title>
+    <ontology:qshort rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qq</ontology:qshort>
+    <ontology:question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qq</ontology:question>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200201</ontology:uid>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100125</ontology:qid>
+    <ontology:qdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/04/07</ontology:qdate>
+    <ontology:qrate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-1</ontology:qrate>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User200206">
     <ontology:interested rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interested</ontology:interested>
@@ -600,31 +605,31 @@
     <ontology:fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">new2</ontology:fname>
     <ontology:reputation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:reputation>
     <ontology:password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">new</ontology:password>
-    <ontology:lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">homes</ontology:lname>
     <ontology:availability rdf:datatype="http://www.w3.org/2001/XMLSchema#string">available</ontology:availability>
+    <ontology:lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">homes</ontology:lname>
     <ontology:picture rdf:datatype="http://www.w3.org/2001/XMLSchema#string">/Users/heshanjayasinghe/enigma/EnigmaSuperClient/src/valkyrie/enigma/enigmaplus/view/images/default-person.png</ontology:picture>
     <ontology:designation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">detective</ontology:designation>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#qcategory">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Question"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Question"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#ask">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:range rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Question"/>
     <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Question"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#answer100500">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Answer"/>
-    <ontology:avote rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</ontology:avote>
-    <ontology:answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">answer after changes</ontology:answer>
-    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
-    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
-    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
-    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
     <ontology:aid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100500</ontology:aid>
+    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
+    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
+    <ontology:answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">answer after changes</ontology:answer>
+    <ontology:avote rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</ontology:avote>
+    <rdf:type rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Answer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Question4">
     <ontology:qrate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11</ontology:qrate>
@@ -639,45 +644,45 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#answer102126">
-    <ontology:aid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">102126</ontology:aid>
-    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/24</ontology:adate>
-    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
-    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
-    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
     <ontology:answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hello</ontology:answer>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
+    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
+    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/24</ontology:adate>
+    <ontology:aid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">102126</ontology:aid>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#avote">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Answer"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Answer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#question100126">
-    <ontology:qrate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</ontology:qrate>
-    <ontology:qshort rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qq</ontology:qshort>
-    <ontology:question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qq</ontology:question>
-    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200201</ontology:uid>
-    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100126</ontology:qid>
-    <ontology:qdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/04/08</ontology:qdate>
     <ontology:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">i have q</ontology:title>
+    <ontology:qdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/04/08</ontology:qdate>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100126</ontology:qid>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200201</ontology:uid>
+    <ontology:question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qq</ontology:question>
+    <ontology:qshort rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qq</ontology:qshort>
+    <ontology:qrate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</ontology:qrate>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#answer">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Answer"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Answer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#category1">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Category"/>
-    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#long">001</ontology:qid>
-    <ontology:cid rdf:datatype="http://www.w3.org/2001/XMLSchema#long">001</ontology:cid>
-    <ontology:expertarea rdf:datatype="http://www.w3.org/2001/XMLSchema#string">developing</ontology:expertarea>
-    <ontology:catname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">java</ontology:catname>
     <ontology:subcat rdf:datatype="http://www.w3.org/2001/XMLSchema#string">swing</ontology:subcat>
+    <ontology:catname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">java</ontology:catname>
+    <ontology:expertarea rdf:datatype="http://www.w3.org/2001/XMLSchema#string">developing</ontology:expertarea>
+    <ontology:cid rdf:datatype="http://www.w3.org/2001/XMLSchema#long">001</ontology:cid>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#long">001</ontology:qid>
+    <rdf:type rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Category"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#qnote">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Question"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Question"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User200207">
     <ontology:reputation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:reputation>
@@ -691,25 +696,34 @@
     <ontology:picture rdf:datatype="http://www.w3.org/2001/XMLSchema#string">/Users/heshanjayasinghe/enigma/EnigmaSuperClient/src/valkyrie/enigma/enigmaplus/view/images/default-person.png</ontology:picture>
     <ontology:designation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">new3</ontology:designation>
   </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#question100130">
+    <ontology:qdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/25</ontology:qdate>
+    <ontology:qrate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:qrate>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100130</ontology:qid>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
+    <ontology:question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">get 404 error</ontology:question>
+    <ontology:qshort rdf:datatype="http://www.w3.org/2001/XMLSchema#string">restful webservice useing SPING</ontology:qshort>
+    <ontology:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">how to create RESTful web Service</ontology:title>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#designation">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#qid">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Answer"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Category"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Question"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Question"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Category"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Answer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#answer1">
-    <ontology:aid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</ontology:aid>
-    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
-    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
-    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100123</ontology:qid>
-    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200201</ontology:uid>
     <ontology:answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">answer after 2nd change</ontology:answer>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200201</ontology:uid>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100123</ontology:qid>
+    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
+    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
+    <ontology:aid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</ontology:aid>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User200210">
     <ontology:fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qwe</ontology:fname>
@@ -724,27 +738,27 @@
     <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200210</ontology:uid>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#question">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Question"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Question"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#aid">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Answer"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Answer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#answer102114">
-    <ontology:answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ontology:answer>
-    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
-    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
-    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
-    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
     <ontology:aid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">102114</ontology:aid>
+    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
+    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
+    <ontology:answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ontology:answer>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#catname">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Category"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Category"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Answer">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -756,13 +770,13 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#question100127">
-    <ontology:qdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:qdate>
-    <ontology:qshort rdf:datatype="http://www.w3.org/2001/XMLSchema#string">this should pop at at top</ontology:qshort>
-    <ontology:question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">this should pop at at top as its last question</ontology:question>
-    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
-    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
-    <ontology:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Test question</ontology:title>
     <ontology:qrate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</ontology:qrate>
+    <ontology:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Test question</ontology:title>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
+    <ontology:question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">this should pop at at top as its last question</ontology:question>
+    <ontology:qshort rdf:datatype="http://www.w3.org/2001/XMLSchema#string">this should pop at at top</ontology:qshort>
+    <ontology:qdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:qdate>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#question100115">
     <ontology:qrate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">37</ontology:qrate>
@@ -781,12 +795,12 @@
     <ontology:attachment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">attachment 3</ontology:attachment>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#answer102109">
-    <ontology:aid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">102109</ontology:aid>
-    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
-    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
-    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
-    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
     <ontology:answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">asd</ontology:answer>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
+    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
+    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
+    <ontology:aid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">102109</ontology:aid>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User200208">
     <ontology:interested rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interested</ontology:interested>
@@ -801,30 +815,30 @@
     <ontology:availability rdf:datatype="http://www.w3.org/2001/XMLSchema#string">available</ontology:availability>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#reputation">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#QA">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:range rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Answer"/>
     <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Question"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Answer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Category">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#password">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#question11">
-    <ontology:qrate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:qrate>
-    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100116</ontology:qid>
-    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
-    <ontology:question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">asdasdasd</ontology:question>
-    <ontology:qshort rdf:datatype="http://www.w3.org/2001/XMLSchema#string">asdasd</ontology:qshort>
     <ontology:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">asda</ontology:title>
+    <ontology:qshort rdf:datatype="http://www.w3.org/2001/XMLSchema#string">asdasd</ontology:qshort>
+    <ontology:question rdf:datatype="http://www.w3.org/2001/XMLSchema#string">asdasdasd</ontology:question>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100116</ontology:qid>
+    <ontology:qrate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:qrate>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User200211">
     <ontology:interested rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interested</ontology:interested>
@@ -839,37 +853,37 @@
     <ontology:fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wer</ontology:fname>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#answer100126">
-    <ontology:answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">as</ontology:answer>
-    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
-    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100126</ontology:qid>
-    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
-    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
     <ontology:aid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100126</ontology:aid>
+    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
+    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100126</ontology:qid>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
+    <ontology:answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">as</ontology:answer>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#answer102113">
-    <ontology:aid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">102113</ontology:aid>
-    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
-    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
-    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
-    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
     <ontology:answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hello</ontology:answer>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
+    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
+    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
+    <ontology:aid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">102113</ontology:aid>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#qdate">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Question"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#Question"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#answer102125">
-    <ontology:aid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">102125</ontology:aid>
-    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
-    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
-    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
-    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
     <ontology:answer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">test answer</ontology:answer>
+    <ontology:uid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200202</ontology:uid>
+    <ontology:qid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100127</ontology:qid>
+    <ontology:arate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</ontology:arate>
+    <ontology:adate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015/05/22</ontology:adate>
+    <ontology:aid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">102125</ontology:aid>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#picture">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#User"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
 </rdf:RDF>

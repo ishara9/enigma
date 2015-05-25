@@ -5,10 +5,13 @@ import java.beans.PropertyVetoException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.JInternalFrame;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import valkyrie.enigma.enigmaplus.Controller.EmailController;
 import valkyrie.enigma.enigmaplus.Controller.QuestionController;
 import valkyrie.enigma.enigmaplus.Controller.UserController;
 import static valkyrie.enigma.enigmaplus.EnigmaMain.jDesktopPane1;
+import valkyrie.enigma.enigmaplus.model.Notification;
 import valkyrie.enigma.enigmaplus.model.Question;
 
 
@@ -16,7 +19,11 @@ public class askview extends javax.swing.JInternalFrame {
 
     JInternalFrame intr;
     Question q;
-
+    Notification n;   
+String[] askerMail = new String[100];
+    String[] askerStatus = new String[100];
+    String[] askerFname = new String[100];
+    int i=0;
     /**
      * Creates new form askview
      */
@@ -33,13 +40,21 @@ public class askview extends javax.swing.JInternalFrame {
 //        Object[] row = {fname+" "+lname, destination, reputation};
 //        tmod.addRow(row);
 //    }
-    public void setTable(String fname, String lname, String destination, String reputation, String availability) {
+    public void setTable(String fname, String lname, String destination, String reputation, String availability,String email) {
         DefaultTableModel tmod = (DefaultTableModel) jTable1.getModel();
         Object[] row = {fname + " " + lname, destination, reputation, availability};
         tmod.addRow(row);
+        
+        System.out.println("worked");
+        System.out.println(email);
+        askerMail[i] = email;
+        askerStatus[i]= availability;
+        askerFname[i]=fname;
+        System.out.println(askerMail[i]+" "+i);
+        i++;
     }
 
-    public void setValues(String title1, String short_des, String des, long qid) {
+    public void setValues(String title1, String short_des, String des, long qid, String[] uid) {
        // long c;
         Date date = new Date();
         //String modifiedDate = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").format(date);
@@ -129,7 +144,6 @@ public class askview extends javax.swing.JInternalFrame {
         });
 
         jComboBox1.setEditable(true);
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         javax.swing.GroupLayout panelaskviewLayout = new javax.swing.GroupLayout(panelaskview);
         panelaskview.setLayout(panelaskviewLayout);
@@ -350,6 +364,20 @@ public class askview extends javax.swing.JInternalFrame {
 
     private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
 
+        
+       try{
+        for (int j = 0; j < askerMail.length - 1; j++) {
+            if (!askerStatus[j].equals("avilable")) {
+                EmailController ec = new EmailController();
+                //String qid, String title, String sDescription, String description, String askerFname, String expertEmail
+                ec.sendMail(String.valueOf(q.getQid()), q.getTitle(), q.getQ_short(), q.getQuestion(), askerFname[j], askerMail[j]);
+            }
+        }
+       }catch(Exception e){
+                       JOptionPane.showMessageDialog(null, "Exception occur", "email sending error", JOptionPane.ERROR_MESSAGE);
+
+       }
+       
         this.setVisible(false);
         intr.setVisible(false);
         JInternalFrame intr = new Questionmain();
@@ -366,21 +394,9 @@ public class askview extends javax.swing.JInternalFrame {
 
         //System.out.println(q.getTitle()+""+ q.getQ_short()+""+ q.getQuestion()+""+ q.getUid());
         iq.insert(q.getTitle(), q.getQ_short(), q.getQuestion(), q.getUid(), q.getQid(), q.getDate());
-//        try {
-//            int res = QuestionController.addQuestion(q);
-//            if (res > 0) {
-//                JOptionPane.showMessageDialog(this, "Added ");
-//            }
-//        } catch (ClassNotFoundException ex) {
-//            ex.printStackTrace();
-//        } catch (SQLException ex) {
-//            ex.printStackTrace();
-//        }
-//        panelquestionviewM.setVisible(true);
-//        qviewpanel_title.setText("<html><body style=\"word-wrap: break-word;\">" + title + "</body></html>");
-//        qviewpanel_qnote.setText("<html><body style=\"word-wrap: break-word;\">" + short_des + "</body></html>");
-//        qviewpanel_qdes.setText("<html><body style=\"word-wrap: break-word;\">" + des + "</body></html>");
-//        panelaskview.setVisible(false);
+        iq.notificationInsert(n.getQid(), n.getTitle(),n.getQ_short(),n.getDate() ,n.getAskerID());
+        
+        
     }//GEN-LAST:event_jButton22ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed

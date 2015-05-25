@@ -1,17 +1,29 @@
 
 package valkyrie.enigma.enigmaplus.view;
 
+import com.hp.hpl.jena.datatypes.xsd.XSDDatatype;
+import com.hp.hpl.jena.rdf.model.Model;
+import com.hp.hpl.jena.rdf.model.ModelFactory;
+import com.hp.hpl.jena.rdf.model.Property;
+import com.hp.hpl.jena.rdf.model.Resource;
 import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.beans.PropertyVetoException;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import static java.lang.Long.parseLong;
 import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JInternalFrame;
 import javax.swing.JTextField;
+import javax.swing.Timer;
 import valkyrie.enigma.enigmaplus.Controller.AutoSuggestor;
 import valkyrie.enigma.enigmaplus.Controller.ElapsedTimeFinder;
 import valkyrie.enigma.enigmaplus.Controller.QuestionController;
@@ -20,6 +32,7 @@ import valkyrie.enigma.enigmaplus.Controller.elapsedTime;
 import valkyrie.enigma.enigmaplus.EnigmaMain;
 import static valkyrie.enigma.enigmaplus.EnigmaMain.jDesktopPane1;
 import valkyrie.enigma.enigmaplus.jena_enigma.sortbydate;
+import valkyrie.enigma.enigmaplus.rdfPath;
 import valkyrie.enigma.enigmaplus.service.controller.Simileraty;
 
 
@@ -41,6 +54,7 @@ public class Questionmain extends javax.swing.JInternalFrame {
         if(QuestionController.nextQuestion == 0){
             jButton1.setEnabled(false);
         }
+        jComboBox1.firePopupMenuCanceled();
         jComboBox1.getEditor().getEditorComponent().addKeyListener(new KeyAdapter() {    
         public void keyReleased(KeyEvent event) {
             if (event.getKeyCode() == KeyEvent.VK_ENTER) {
@@ -62,8 +76,10 @@ public class Questionmain extends javax.swing.JInternalFrame {
                 jComboBox1.showPopup();
     }}
 });
-        
-        sortbydate sbd = new sortbydate();
+        refilthrea();
+        fillquestion();
+    }
+      public void fillquestion(){  sortbydate sbd = new sortbydate();
         sbd.sortbydate();  
         elapsedTime et = new elapsedTime(); 
         
@@ -177,6 +193,50 @@ public class Questionmain extends javax.swing.JInternalFrame {
             jButton2.setEnabled(false);
         }
         
+    }
+    
+    public void notificationInsert(long qid, String title, String qshort, String qdate, String[] AskerId) {
+        // public static void main(String args[]){
+        Model m = ModelFactory.createDefaultModel();
+        //  m.read("/Users/avinda/Desktop/ishara/jena_Enigma/jena_Enigma/src/jena_enigma/enigmardf2.rdf", "RDF/XML");
+        m.read(rdfPath.rdfPath, "RDF/XML");
+        String NS = "http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#";
+
+        Resource r = m.createResource(NS + "notification"+qid);//Subject
+        Property p1 = m.createProperty(NS + "title");
+        Property p2 = m.createProperty(NS + "qshort");
+   //     Property p3 = m.createProperty(NS + "question");
+        Property p4 = m.createProperty(NS + "askerid");
+        Property p5 = m.createProperty(NS + "qid");
+        Property p6 = m.createProperty(NS + "askerid");
+        Property p7 = m.createProperty(NS + "qdate");
+
+        r.removeAll(p1);
+        r.removeAll(p2);
+ //       r.removeAll(p3);
+        r.removeAll(p4);
+        r.removeAll(p5);
+        r.removeAll(p6);
+        r.removeAll(p7);
+//        r.addProperty(p1, "title", XSDDatatype.XSDstring);
+//        r.addProperty(p2, "qshort", XSDDatatype.XSDstring);
+//        r.addProperty(p3, "qlong", XSDDatatype.XSDstring);
+//        r.addProperty(p4, "String.valueOf(uid)", XSDDatatype.XSDstring);
+
+        r.addProperty(p1, title, XSDDatatype.XSDstring);
+        r.addProperty(p2, qshort, XSDDatatype.XSDstring);
+ //       r.addProperty(p3, qlong, XSDDatatype.XSDstring);
+        r.addProperty(p4, String.valueOf(AskerId[0]), XSDDatatype.XSDstring);
+        r.addProperty(p5, String.valueOf(qid), XSDDatatype.XSDstring);
+        r.addProperty(p6, String.valueOf(AskerId[1]), XSDDatatype.XSDstring);
+        r.addProperty(p7, qdate, XSDDatatype.XSDstring);
+        
+        try {
+            m.write(new FileOutputStream(rdfPath.rdfPath), "RDF/XML");
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(QuestionController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
     }
     
    public void dateDifferacne(String date){
@@ -490,7 +550,6 @@ public class Questionmain extends javax.swing.JInternalFrame {
         );
 
         jComboBox1.setEditable(true);
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Search" }));
         jComboBox1.setToolTipText("search..");
         jComboBox1.addPopupMenuListener(new javax.swing.event.PopupMenuListener() {
             public void popupMenuWillBecomeVisible(javax.swing.event.PopupMenuEvent evt) {
@@ -1112,4 +1171,21 @@ public class Questionmain extends javax.swing.JInternalFrame {
     public static javax.swing.JLabel qpanel5_qnote;
     public static javax.swing.JButton qpanel5_qtitle;
     // End of variables declaration//GEN-END:variables
-}
+
+public void refilthrea(){
+   try {
+          Timer tim;
+            tim = new Timer(1000, new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    
+            fillquestion();
+      
+                }
+            });
+            tim.start();
+            //   }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+}}

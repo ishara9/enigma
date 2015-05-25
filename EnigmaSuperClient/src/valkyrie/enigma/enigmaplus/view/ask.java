@@ -14,10 +14,14 @@ import java.awt.FlowLayout;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.beans.PropertyVetoException;
+import java.io.File;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.ImageIcon;
+import javax.swing.JFileChooser;
 import javax.swing.JInternalFrame;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
+import org.jdesktop.swingx.autocomplete.AutoCompleteDecorator;
 import valkyrie.enigma.enigmaplus.Controller.QuestionController;
 import valkyrie.enigma.enigmaplus.EnigmaMain;
 import valkyrie.enigma.enigmaplus.service.controller.TagPanel;
@@ -25,44 +29,50 @@ import static valkyrie.enigma.enigmaplus.EnigmaMain.jDesktopPane1;
 import valkyrie.enigma.enigmaplus.rdfPath;
 import valkyrie.enigma.enigmaplus.service.controller.Simileraty;
 
-
 public class ask extends javax.swing.JInternalFrame {
-String title1;
-String short_des;
-String des;
+
+    String title1;
+    String short_des;
+    String des;
+    String email;
+    String[] uid = new String[100];
+    int i =0;
+
     /**
      * Creates new form ask
      */
     public ask() {
         initComponents();
         ((javax.swing.plaf.basic.BasicInternalFrameUI) this.getUI()).setNorthPane(null);
-          tagpanel.setPreferredSize(new Dimension(100, 30));
+        tagpanel.setPreferredSize(new Dimension(100, 30));
         tagpanel.setLayout(new FlowLayout(1, 3, 2));
         tagpanel.setBackground(Color.white);
         tagpanel.setBorder(javax.swing.BorderFactory.createLineBorder(Color.MAGENTA.magenta));
-        jComboBox1.getEditor().getEditorComponent().addKeyListener(new KeyAdapter() {    
-        public void keyReleased(KeyEvent event) {
-           
-         
-            String s=   ((JTextField)jComboBox1.getEditor().getEditorComponent()).getText();
-            if (event.getKeyCode()==KeyEvent.VK_ENTER) {
-                tagcheck(event);
+        jComboBox1.getEditor().getEditorComponent().addKeyListener(new KeyAdapter() {
+            public void keyReleased(KeyEvent event) {
+
+                String s = ((JTextField) jComboBox1.getEditor().getEditorComponent()).getText();
+                if (event.getKeyCode() == KeyEvent.VK_ENTER) {
+                    tagcheck(event);
                 }
-            Simileraty sim = new Simileraty();
-            DefaultComboBoxModel model = (DefaultComboBoxModel)jComboBox1.getModel();
-            model.removeAllElements();
-            model.addElement(s);
-            for(int i=0;i<EnigmaMain.tags.size();i++){
-                String title= EnigmaMain.tags.get(i);
-            double probability3 = sim.compareStrings(s,title);
-            if(probability3>0.7){
-                
-                model.addElement(title);           
+
+                Simileraty sim = new Simileraty();
+                DefaultComboBoxModel model = (DefaultComboBoxModel) jComboBox1.getModel();
+                model.removeAllElements();
+                model.addElement(s);
+                for (int i = 0; i < EnigmaMain.tags.size(); i++) {
+                    String title = EnigmaMain.tags.get(i);
+                    double probability3 = sim.compareStrings(s, title);
+                    if (probability3 > 0.7) {
+
+                        model.addElement(title);
+                    }
+                    jComboBox1.showPopup();
+                }
             }
-                jComboBox1.showPopup();
-    }}
-        private void tagcheck(KeyEvent evt) {
-                String s = ((JTextField)jComboBox1.getEditor().getEditorComponent()).getText();
+
+            private void tagcheck(KeyEvent evt) {
+                String s = ((JTextField) jComboBox1.getEditor().getEditorComponent()).getText();
                 if (s.length() > 0) {
                     for (String tag : EnigmaMain.tags) {
                         if (s.equals(tag)) {
@@ -74,10 +84,8 @@ String des;
                     }
                 }
             }
-});
-        
+        });
 
-       
     }
 
     /**
@@ -89,6 +97,7 @@ String des;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jFileChooser1 = new javax.swing.JFileChooser();
         panelask = new javax.swing.JPanel();
         panelask_txt_title = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
@@ -135,6 +144,11 @@ String des;
         jToggleButton3.setBackground(new java.awt.Color(255, 255, 255));
         jToggleButton3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jToggleButton3.setText("Attach file");
+        jToggleButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton3ActionPerformed(evt);
+            }
+        });
 
         jToggleButton1.setBackground(new java.awt.Color(255, 255, 255));
         jToggleButton1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -156,16 +170,7 @@ String des;
         panelask_txt_sdes.setRows(5);
         jScrollPane4.setViewportView(panelask_txt_sdes);
 
-        javax.swing.GroupLayout tagpanelLayout = new javax.swing.GroupLayout(tagpanel);
-        tagpanel.setLayout(tagpanelLayout);
-        tagpanelLayout.setHorizontalGroup(
-            tagpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        tagpanelLayout.setVerticalGroup(
-            tagpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 29, Short.MAX_VALUE)
-        );
+        tagpanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel19.setText("Add tags :");
 
@@ -178,36 +183,35 @@ String des;
             .addGroup(panelaskLayout.createSequentialGroup()
                 .addGap(40, 40, 40)
                 .addGroup(panelaskLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(panelaskLayout.createSequentialGroup()
-                        .addGroup(panelaskLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(panelaskLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(panelask_txt_title)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelaskLayout.createSequentialGroup()
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addContainerGap())
-                    .addGroup(panelaskLayout.createSequentialGroup()
-                        .addGroup(panelaskLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jScrollPane4)
+                            .addComponent(jScrollPane2)
                             .addComponent(tagpanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(panelaskLayout.createSequentialGroup()
-                                .addComponent(jLabel19)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(18, 18, 18)
                                 .addComponent(jToggleButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(43, 43, 43)
                                 .addComponent(jToggleButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(37, 37, 37)
                                 .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(39, 39, 39)
-                                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(55, 55, 55))
+                                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 450, Short.MAX_VALUE))
+                            .addGroup(panelaskLayout.createSequentialGroup()
+                                .addGroup(panelaskLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(panelaskLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(panelaskLayout.createSequentialGroup()
+                                            .addComponent(jLabel19)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(39, 39, 39))
                     .addGroup(panelaskLayout.createSequentialGroup()
-                        .addGroup(panelaskLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 928, Short.MAX_VALUE))))
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         panelaskLayout.setVerticalGroup(
             panelaskLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -219,22 +223,24 @@ String des;
                 .addGap(18, 18, 18)
                 .addComponent(jLabel3)
                 .addGap(3, 3, 3)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(17, 17, 17)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 513, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tagpanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(panelaskLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel19)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(tagpanel, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(panelaskLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jToggleButton2)
                     .addComponent(jToggleButton3)
-                    .addComponent(jToggleButton1)
-                    .addComponent(jLabel19)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(36, 36, 36))
+                    .addComponent(jToggleButton1))
+                .addContainerGap(113, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -277,10 +283,9 @@ String des;
 //                Object[] row1 = {"01","hell","no"};
 //                tmodel.addRow(row1);
         // System.out.println(fname+" "+lname+","+des+","+rep);
-     //   FileManager.get().addLocatorClassLoader(Jena_Enigma.class.getClassLoader());
-
+        //   FileManager.get().addLocatorClassLoader(Jena_Enigma.class.getClassLoader());
         Model model = FileManager.get().loadModel(rdfPath.rdfPath);
-        String queryString = "PREFIX sep: <http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#>"
+         String queryString = "PREFIX sep: <http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#>"
                 + "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>"
                 + "PREFIX strg: <http://www.w3.org/2001/XMLSchema#string#>"
                 + "SELECT  * "
@@ -290,10 +295,12 @@ String des;
                 + "?User sep:fname ?fname ."
                 + "?User sep:reputation ?rep ."
                 + "?User sep:availability ?availability ."
+                + "?User sep:uid ?uid ."
+                + "?User sep:email ?email ."
                 + "}"
                 + "Order by desc(?rep) "
                 + "LIMIT 100 " ;
-                
+
         Query query = QueryFactory.create(queryString);
 
         QueryExecution qexec = QueryExecutionFactory.create(query, model);
@@ -307,8 +314,10 @@ String des;
                 String des = soln.getLiteral("des").getLexicalForm();
                 String rep = soln.getLiteral("rep").getLexicalForm();
                 String availability = soln.getLiteral("availability").getLexicalForm();
+                uid[i++] = soln.getLiteral("uid").getLexicalForm();
+                email = soln.getLiteral("email").getLexicalForm();
 
-                intr.setTable(fname, lname, des, rep, availability);
+                intr.setTable(fname, lname, des, rep, availability, email);
                 System.out.println(fname + " " + lname + "," + des + "," + rep);
             }
         } finally {
@@ -318,12 +327,10 @@ String des;
         title1 = panelask_txt_title.getText();
         short_des = panelask_txt_sdes.getText();
         des = panelask_txt_dis.getText();
-        
-        intr.setValues(title1, short_des, des, qc.qidCounter());
-        
-        
+
+        intr.setValues(title1, short_des, des, qc.qidCounter(),uid);
+
          //String ctgry = (String) q_category.getSelectedItem();
-         
 //        panelask.setVisible(false);
 //        panelaskview.setVisible(true);
 //
@@ -371,10 +378,20 @@ String des;
          }*/
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    private void jToggleButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton3ActionPerformed
+        int o = jFileChooser1.showOpenDialog(this);
+        if (o == JFileChooser.APPROVE_OPTION) {
+            File picture = jFileChooser1.getSelectedFile();
+
+            System.out.println(picture.getPath());
+        }
+    }//GEN-LAST:event_jToggleButton3ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton4;
     private javax.swing.JComboBox jComboBox1;
+    private javax.swing.JFileChooser jFileChooser1;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

@@ -54,6 +54,7 @@ public class answertest extends JFrame {
     }
 
     public class answeringpanel extends JPanel {
+        int value =1;
 
         public answeringpanel() {
             this.setLayout(new GridBagLayout());
@@ -68,7 +69,7 @@ public class answertest extends JFrame {
 
             postAnswer.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
-                    box.add(new TestPanel(), 1);
+                    box.add(new TestPanel(), value++);
                     scrollPane.validate();
                 }
             });

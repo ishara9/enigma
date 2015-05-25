@@ -75,7 +75,7 @@ public class questionviewM extends javax.swing.JInternalFrame {
         ap1.answerLabel.setText(ac.a.getAnswer());
         ap1.answerDateLabel.setText(et.duration(ac.a.getDate()));
         ap1.setBounds(10, 10, 1080, 100);
-        jPanel1.add(ap1);        
+      //  jPanel1.add(ap1);        
         
         }
         
@@ -106,7 +106,6 @@ public class questionviewM extends javax.swing.JInternalFrame {
         jButton41 = new javax.swing.JButton();
         jLabel78 = new javax.swing.JLabel();
         jPanel27 = new javax.swing.JPanel();
-        qviewpanel_qdes = new javax.swing.JLabel();
         qviewpanel_title = new javax.swing.JLabel();
         qviewpanel_qnote = new javax.swing.JLabel();
         jLabel80 = new javax.swing.JLabel();
@@ -115,8 +114,8 @@ public class questionviewM extends javax.swing.JInternalFrame {
         qviewpanel_answertxt = new javax.swing.JTextArea();
         jLabel79 = new javax.swing.JLabel();
         jButton42 = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        qviewpanel_qdes = new javax.swing.JLabel();
 
         setBorder(null);
         setMaximizable(true);
@@ -144,24 +143,15 @@ public class questionviewM extends javax.swing.JInternalFrame {
 
         jPanel27.setBackground(new java.awt.Color(255, 255, 255));
 
-        qviewpanel_qdes.setFont(new java.awt.Font("Lucida Grande", 0, 11)); // NOI18N
-        qviewpanel_qdes.setText("I am working on a photo sharing application where users will be able to upload their ");
-
         javax.swing.GroupLayout jPanel27Layout = new javax.swing.GroupLayout(jPanel27);
         jPanel27.setLayout(jPanel27Layout);
         jPanel27Layout.setHorizontalGroup(
             jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel27Layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(qviewpanel_qdes, javax.swing.GroupLayout.PREFERRED_SIZE, 668, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(258, Short.MAX_VALUE))
+            .addGap(0, 954, Short.MAX_VALUE)
         );
         jPanel27Layout.setVerticalGroup(
             jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel27Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(qviewpanel_qdes)
-                .addContainerGap(37, Short.MAX_VALUE))
+            .addGap(0, 57, Short.MAX_VALUE)
         );
 
         qviewpanel_title.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -200,7 +190,7 @@ public class questionviewM extends javax.swing.JInternalFrame {
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel8Layout.createSequentialGroup()
                                 .addComponent(jLabel79)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 869, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1851, Short.MAX_VALUE))
                             .addComponent(jScrollPane11)))
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -219,20 +209,21 @@ public class questionviewM extends javax.swing.JInternalFrame {
                 .addGap(64, 64, 64))
         );
 
-        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 963, Short.MAX_VALUE)
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1031, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 238, Short.MAX_VALUE)
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 253, Short.MAX_VALUE)
         );
 
-        jScrollPane1.setViewportView(jPanel1);
+        qviewpanel_qdes.setFont(new java.awt.Font("Lucida Grande", 0, 11)); // NOI18N
+        qviewpanel_qdes.setText("I am working on a photo sharing application where users will be able to upload their ");
 
         javax.swing.GroupLayout panelquestion2Layout = new javax.swing.GroupLayout(panelquestion2);
         panelquestion2.setLayout(panelquestion2Layout);
@@ -242,22 +233,25 @@ public class questionviewM extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(panelquestion2Layout.createSequentialGroup()
-                .addGap(40, 40, 40)
                 .addGroup(panelquestion2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelquestion2Layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 982, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelquestion2Layout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(jLabel78, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(116, 116, 116)
+                        .addComponent(qviewpanel_qdes, javax.swing.GroupLayout.PREFERRED_SIZE, 668, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(panelquestion2Layout.createSequentialGroup()
                         .addGroup(panelquestion2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(panelquestion2Layout.createSequentialGroup()
+                                .addGap(40, 40, 40)
                                 .addComponent(jButton41, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jPanel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(panelquestion2Layout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addComponent(jLabel78, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addGap(84, 84, 84))))
+                                .addGap(985, 985, 985))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelquestion2Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                        .addComponent(jPanel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGap(84, 84, 84))
             .addGroup(panelquestion2Layout.createSequentialGroup()
                 .addGroup(panelquestion2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelquestion2Layout.createSequentialGroup()
@@ -287,17 +281,20 @@ public class questionviewM extends javax.swing.JInternalFrame {
                         .addGap(20, 20, 20)
                         .addComponent(jLabel80)))
                 .addGap(1, 1, 1)
-                .addGroup(panelquestion2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelquestion2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(panelquestion2Layout.createSequentialGroup()
-                        .addGap(38, 38, 38)
-                        .addComponent(jPanel27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(11, 11, 11)
+                        .addComponent(qviewpanel_qdes)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(249, 249, 249))
                     .addGroup(panelquestion2Layout.createSequentialGroup()
                         .addComponent(jLabel78)
                         .addGap(16, 16, 16)
-                        .addComponent(jButton41)))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                        .addComponent(jButton41)
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                 .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(656, Short.MAX_VALUE))
         );
@@ -345,7 +342,7 @@ public class questionviewM extends javax.swing.JInternalFrame {
         ap1.answerLabel.setText(ac.a.getAnswer());
         ap1.answerDateLabel.setText(et.duration(ac.a.getDate()));
         ap1.setBounds(10, 110, 1080, 100);        
-        jPanel1.add(ap1);
+       // jPanel1.add(ap1);
         
 //        ac.viewAnswer(a.getAid());   
 //        AnswerPanel ap1 = new AnswerPanel();
@@ -434,10 +431,9 @@ public class questionviewM extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel78;
     private javax.swing.JLabel jLabel79;
     private javax.swing.JLabel jLabel80;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel27;
     private javax.swing.JPanel jPanel8;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane11;
     private javax.swing.JPanel panelquestion2;
