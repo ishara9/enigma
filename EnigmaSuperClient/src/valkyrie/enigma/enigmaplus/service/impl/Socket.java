@@ -21,7 +21,7 @@ import valkyrie.enigma.enigmaplus.service.controller.ResourceHandler;
  *
  * @author heshanjayasinghe
  */
-public class NewClass {
+public class Socket {
     
     public static void main(String[] args) {
         try {
