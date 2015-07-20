@@ -43,7 +43,7 @@ public class UserDAOImpl implements UserDAO{
     
     
     @Override
-    public int CreateUser(User user) throws ClassNotFoundException, OpenRDFException {
+    public User CreateUser(User user) throws ClassNotFoundException, OpenRDFException {
        String queryString = "PREFIX sep: <http://www.semanticweb.org/hesh/ontologies/valkyrie/enigmaplus/ontology#>"
                 + "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>"
                 + "PREFIX strg: <http://www.w3.org/2001/XMLSchema#string#>"             
@@ -71,7 +71,7 @@ public class UserDAOImpl implements UserDAO{
         } finally {
             qexec.close();
         }
-        return 0;
+        return user;
         
         }
 

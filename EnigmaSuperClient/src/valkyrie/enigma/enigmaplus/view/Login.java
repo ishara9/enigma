@@ -341,24 +341,8 @@ public class Login extends javax.swing.JInternalFrame {
                     } catch (PropertyVetoException e) {
                         System.out.println(e);
                     }
-
-             //   UserController uc = new UserController();
-                //      uc.getUser(uc.getUserLogged());
                     EnigmaMain.head_main_userName.setText(user.getFname() + " " + user.getLname());
-
                     BufferedImage image;
-//                    try {
-//                      //  image = ImageIO.read(new File(uc.u1.getPic()));
-//                      //  BufferedImage resizedImage = editProfile.resize(image, 34, 30);//resize the image to 100x100
-//                      //  BufferedImage resizedImage2 = editProfile.resize(image, 100, 76);
-//                      //  ImageIcon icon = new ImageIcon(resizedImage);
-//                      //  ImageIcon icon2 = new ImageIcon(resizedImage2);
-//                      //  EnigmaMain.mini_profile_pic.setIcon(icon);
-//                      //  EnigmaMain.profile_pic_signout.setIcon(icon2);
-//                    } catch (IOException ex) {
-//                        Logger.getLogger(editProfile.class.getName()).log(Level.SEVERE, null, ex);
-//                    }
-
                 } else {
                     JOptionPane.showMessageDialog(this, "No customer found " + email);
                 }

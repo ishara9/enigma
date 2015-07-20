@@ -59,6 +59,26 @@ public class UserREST {
 
     }
 
+    @GET
+    @Path("/signup")
+    public User getUsersdeatils(@QueryParam("user") User user) {
+        String name = null;
+        try {
+            User users = userservice.SignupUser(user);
+          //  name = user.getFname();
+        } catch (NullPointerException ex) {
+            ex.printStackTrace();
+        } catch (ClassNotFoundException ex) {
+            ex.printStackTrace();
+        } catch (OpenRDFException ex) {
+            ex.printStackTrace();
+        }
+        return user;
+
+    }
+    
+    
+    
     @POST
     @Path("/logintest")
     public String LoginUsers(

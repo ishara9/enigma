@@ -39,7 +39,7 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public int SignupUser(User user) throws ClassNotFoundException, OpenRDFException {
+    public User SignupUser(User user) throws ClassNotFoundException, OpenRDFException {
         return userdao.CreateUser(user); //To change body of generated methods, choose Tools | Templates.
     }
 

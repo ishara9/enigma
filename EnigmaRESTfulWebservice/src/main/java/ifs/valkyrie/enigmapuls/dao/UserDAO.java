@@ -17,7 +17,7 @@ import org.openrdf.OpenRDFException;
  */
 public interface UserDAO {
     
-    public int CreateUser(User user)throws ClassNotFoundException,OpenRDFException;
+    public User CreateUser(User user)throws ClassNotFoundException,OpenRDFException;
     
     public int UpdateUser(User user)throws ClassNotFoundException,OpenRDFException;
     
