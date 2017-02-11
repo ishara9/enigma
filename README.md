@@ -8,18 +8,21 @@ EnigmaKB provides separate functionalities to its clients and administrators sep
 
 #Project Overview
 
-Knowledge Base
-RDF (Resource Description Framework)
-Protege
-Sparql query
-Lync
+#Knowledge Base
+RDF (Resource Description Framework).
+Protege.
+Sparql query.
+
+#Lync
 Communication platform developed by Microsoft.
 UCWA 3.0(Unified Communications Web API).
-RESTful Web services
+
+#RESTful Web services
 Request and response handling.
 Connection with RDF ontology using factory patterns.
 Handling CURD operations.
-EnigmaPlus
+
+#EnigmaPlus
 Client desktop application.
 Integrated with Microsoft Lync.
 
