@@ -7,8 +7,6 @@ The project consist of desktop application interfaces which should be installed 
 
 EnigmaKB use Lync API , REST web services, RDF  knowledge base and semantics to effectively achieve clients’ targets. 
 
-When considering ask question and give answer it is very useful having RDF knowledge base than ordinary Relational Database (which use more resources than RDF files.
-
 EnigmaKB provides separate functionalities to its clients and administrators separately.
 
 #Project Overview
